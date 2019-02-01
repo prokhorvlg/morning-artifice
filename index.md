@@ -11,17 +11,6 @@ page_highlight: "#ff00ff"
 page_features: [
                 {
                   type: 'spinBanner', init: {
-                    id: 'homeSpinBanner',
-                  }
-                },
-                {
-                  type: 'socialButtonSet', init: {
-                    id: 'homeSocialButtonSet',
-                  }
-                },
-                {
-                  type: 'latestUpdate', init: {
-                    id: 'latestUpdate',
                     list-of-updates: [
                       "immortality-taboo",
                       "personal-transport",

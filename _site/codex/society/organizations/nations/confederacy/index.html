@@ -1,0 +1,692 @@
+<!doctype>
+<html lang="en">
+  <head>
+    <!-- Basic meta setup -->
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#222" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="revisit-after" content="5 days">
+
+    <!-- Side brand Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <!-- Site brand Color -->
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Page variables -->
+    <title>Holy and Divine Confederacy</title>
+    <meta name="author" content="prokhorVLG">
+    <meta name="description" content="Kaizen are both software and hardware that make up the artificial intelligences of Unturned Stones, and are what make the world as it is possible.">
+    <meta name="og:image" content="/assets/images/codex/confederacy.png" /> 
+
+    <!--     jQuery     -->
+    <!--     The jQuery library.     -->
+    <script src="/assets/js/jQuery/jquery-3.3.1.min.js"></script>
+
+    <!--     jQuery: Terminal     -->
+    <!--    The plugin that operates the terminal component.     -->
+    <script src="/assets/js/jQuery-terminal/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/jQuery-terminal/jquery.terminal.css">
+
+    <!--    jQuery: Magnific Popup   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!--     Bootstrap Core     -->
+    <!--     For setting up page layouts.     -->
+    <link href="/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!--     Web Fonts     -->
+    <!--     Adds the site fonts.     -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+    <!--     Custom Styles     -->
+    <!--     Adds my site styles.     -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <!--     Normalize     -->
+    <!--     Adds cross-browser consistency and fixes some bugs.     -->
+    <link href="/assets/css/normalize/normalize.css" rel="stylesheet">
+
+    <script src="/assets/js/greensock/TweenMax.min.js"></script>
+
+    <!--     Custom Data     -->
+    <!-- Script: Loads data into global namespace variables  -->
+    <script src="/assets/js/site/data/site-data.js"></script>
+
+    <!--     Custom Scripts     -->
+    <!-- Script: Provides image source reference data -->
+    <script src="/assets/js/site/site-svgref.js"></script>
+    <!-- Script: Provides quote shuffling animation functions -->
+    <script src="/assets/js/site/site-shufflequote.js"></script>
+    <!-- Script: Provides navigation generation -->
+    <script src="/assets/js/site/site-nav.js"></script>
+    <!-- Script: Provides site terminal handler -->
+    <script src="/assets/js/site/site-terminal.js"></script>
+    <!-- Script: Provides codex page specific code -->
+    <script src="/assets/js/site/site-codexPage.js"></script>
+    <!-- Script: Provides infotag functionality (link modals) -->
+    <script src="/assets/js/site/site-infotag.js"></script>
+    <!-- Script: Provides parallaxing functionality -->
+    <script src="/assets/js/site/site-parallax.js"></script>
+
+  </head>
+  <body class="codex" id="body">
+
+    <div class="pageHighlight" style="color: #4de645;"></div>
+    <div id="siteContainer" class="siteContainer color-primary-l">
+      
+      <!--     Contains the site, which is pushed when the nav is opened.     -->
+      <div id="contentContainer" class="contentContainer">
+
+        <!--     Includes the header at the top of the site.     -->
+        <div class="header">
+  <div class="headerTitle font-code-l">
+    <a href="/" class="headerLink headerHub artificeLogo al-2"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="480px" height="48px" >
+<path fill-rule="evenodd" fill="rgb(255,255,255)" 
+ d="M481.699,34.744 L481.699,43.384 L451.759,43.384 L451.759,35.890 C451.259,36.654 450.671,37.374 449.989,38.044 C448.729,39.284 447.279,40.324 445.639,41.164 C443.999,42.004 442.259,42.644 440.419,43.084 C438.579,43.524 436.779,43.744 435.019,43.744 C431.939,43.744 429.109,43.114 426.530,41.854 C423.949,40.594 421.729,38.924 419.869,36.844 C418.009,34.765 416.569,32.404 415.549,29.764 C414.967,28.256 414.570,26.733 414.320,25.199 L414.320,43.384 L404.480,43.384 L404.480,9.424 L404.000,9.424 L404.000,9.000 L376.341,9.000 L376.341,0.784 L404.480,0.784 L405.261,0.784 L414.320,0.784 L414.320,18.313 C414.557,16.897 414.927,15.484 415.459,14.074 C416.419,11.534 417.819,9.265 419.659,7.264 C421.499,5.264 423.739,3.644 426.379,2.404 C429.019,1.165 432.019,0.544 435.379,0.544 C439.379,0.544 442.849,1.405 445.789,3.124 C448.347,4.621 450.336,6.512 451.759,8.795 L451.759,0.784 L481.159,0.784 L481.159,9.424 L461.599,9.424 L461.599,17.704 L478.399,17.704 L478.399,25.684 L461.599,25.684 L461.599,34.744 L481.699,34.744 ZM451.759,10.264 L444.799,15.124 C444.319,14.005 443.709,13.075 442.969,12.334 C442.229,11.594 441.419,10.994 440.539,10.534 C439.659,10.075 438.759,9.754 437.839,9.574 C436.919,9.394 436.019,9.304 435.139,9.304 C433.259,9.304 431.619,9.685 430.219,10.444 C429.507,10.831 428.858,11.275 428.270,11.775 L438.995,22.500 L428.751,32.744 C429.324,33.199 429.943,33.596 430.609,33.934 C431.989,34.634 433.539,34.984 435.259,34.984 C436.139,34.984 437.049,34.874 437.989,34.654 C438.929,34.435 439.829,34.094 440.689,33.634 C441.549,33.175 442.339,32.575 443.059,31.834 C443.779,31.094 444.359,30.184 444.799,29.104 L451.759,33.207 L451.759,10.264 ZM364.342,9.424 L364.000,9.424 L364.000,9.000 L332.000,9.000 L332.042,9.424 L331.378,9.424 C331.459,9.602 331.538,9.782 331.612,9.964 C331.933,10.754 332.161,11.549 332.335,12.347 L332.652,15.517 C332.627,16.718 332.474,17.878 332.182,18.994 C331.861,20.215 331.402,21.364 330.802,22.444 C330.202,23.524 329.472,24.494 328.612,25.354 C327.751,26.215 326.782,26.944 325.702,27.544 L335.062,43.384 L323.962,43.384 L315.802,29.644 L309.382,29.644 L309.382,43.384 L301.342,43.384 L299.542,43.384 L291.262,43.384 L287.962,33.844 L274.702,33.844 L271.462,43.384 L261.382,43.384 L276.922,0.784 L285.802,0.784 L299.542,38.450 L299.542,21.000 L309.382,21.000 L309.382,21.064 L318.382,21.064 C319.542,21.064 320.542,20.515 321.382,19.414 C322.222,18.314 322.642,16.904 322.642,15.184 C322.642,13.424 322.162,12.025 321.202,10.984 C320.242,9.944 319.201,9.424 318.082,9.424 L318.000,9.424 L318.000,9.000 L299.542,9.000 L299.542,1.832 C299.763,1.438 300.055,1.078 300.433,0.784 L318.742,0.784 C320.742,0.784 322.591,1.204 324.292,2.044 C325.992,2.884 327.462,3.985 328.702,5.344 C329.066,5.744 329.405,6.162 329.723,6.593 L329.723,0.784 L364.342,0.784 L365.543,0.784 L374.182,0.784 L374.182,43.384 L364.342,43.384 L364.342,9.424 ZM281.362,12.004 L276.262,27.064 L286.342,27.064 L281.362,12.004 ZM240.583,39.184 C237.342,42.184 233.602,43.684 229.363,43.684 C226.562,43.684 223.922,43.154 221.442,42.094 C218.962,41.035 216.792,39.544 214.932,37.624 C213.072,35.704 211.602,33.394 210.522,30.694 C209.857,29.031 209.399,27.265 209.143,25.397 L209.143,43.384 L201.223,43.384 L181.603,19.024 L181.603,43.384 L171.763,43.384 L171.763,0.784 L179.443,0.784 L199.303,25.804 L199.303,0.784 L209.143,0.784 L209.143,18.661 C209.393,16.880 209.836,15.156 210.522,13.504 C211.602,10.904 213.092,8.644 214.992,6.724 C216.892,4.804 219.142,3.284 221.742,2.164 C224.342,1.045 227.142,0.484 230.142,0.484 C234.102,0.484 237.562,1.315 240.522,2.974 C243.482,4.634 245.702,6.904 247.182,9.784 L239.862,15.304 C238.902,13.384 237.512,11.894 235.692,10.834 C233.872,9.775 231.902,9.244 229.782,9.244 C228.142,9.244 226.652,9.574 225.313,10.234 C223.972,10.894 222.823,11.815 221.862,12.994 C220.902,14.174 220.162,15.544 219.642,17.104 C219.122,18.664 218.862,20.344 218.862,22.144 C218.862,23.984 219.142,25.684 219.702,27.244 C220.262,28.804 221.042,30.154 222.042,31.294 C223.042,32.434 224.232,33.325 225.612,33.964 C226.992,34.604 228.522,34.924 230.202,34.924 C234.043,34.924 237.502,33.145 240.583,29.584 L240.583,28.264 L232.302,28.264 L232.302,21.124 L248.742,21.124 L248.742,43.384 L240.583,43.384 L240.583,39.184 ZM159.764,0.784 L169.604,0.784 L169.604,43.384 L159.764,43.384 L159.764,0.784 ZM130.065,19.024 L130.065,43.384 L121.545,43.384 L120.225,43.384 L110.445,43.384 L102.285,29.644 L95.865,29.644 L95.865,43.384 L86.025,43.384 L86.025,25.662 C85.767,27.242 85.351,28.792 84.735,30.304 C83.675,32.905 82.205,35.194 80.325,37.174 C78.445,39.154 76.205,40.744 73.605,41.944 C71.005,43.144 68.165,43.744 65.085,43.744 C61.925,43.744 59.045,43.124 56.445,41.884 C53.844,40.645 51.624,39.014 49.785,36.994 C47.945,34.975 46.515,32.665 45.495,30.064 C44.913,28.579 44.516,27.065 44.266,25.528 L44.266,43.384 L34.426,43.384 L34.426,17.884 L25.186,36.424 L19.906,36.424 L10.666,17.884 L10.666,43.384 L0.826,43.384 L0.826,0.784 L11.506,0.784 L22.546,23.044 L33.646,0.784 L44.266,0.784 L44.266,18.561 C44.524,16.983 44.939,15.435 45.555,13.924 C46.615,11.324 48.095,9.034 49.995,7.054 C51.895,5.074 54.144,3.494 56.745,2.314 C59.345,1.135 62.184,0.544 65.265,0.544 C68.424,0.544 71.305,1.165 73.905,2.404 C76.505,3.644 78.725,5.284 80.565,7.324 C82.404,9.364 83.825,11.684 84.825,14.284 C85.377,15.719 85.753,17.168 86.000,18.627 L86.000,21.000 L95.865,21.000 L95.865,21.064 L104.865,21.064 C106.024,21.064 107.025,20.515 107.865,19.414 C108.705,18.314 109.125,16.904 109.125,15.184 C109.125,13.424 108.645,12.025 107.685,10.984 C106.725,9.944 105.684,9.424 104.565,9.424 L104.000,9.424 L104.000,9.000 L86.025,9.000 L86.025,3.536 C86.122,2.518 86.546,1.472 87.433,0.784 L105.225,0.784 C107.225,0.784 109.074,1.204 110.775,2.044 C112.475,2.884 113.945,3.985 115.185,5.344 C116.424,6.704 117.395,8.245 118.095,9.964 C118.794,11.684 119.145,13.424 119.145,15.184 C119.145,16.504 118.985,17.774 118.665,18.994 C118.344,20.215 117.885,21.364 117.285,22.444 C116.685,23.524 115.954,24.494 115.095,25.354 C114.234,26.215 113.265,26.944 112.185,27.544 L120.225,41.150 L120.225,0.784 L127.905,0.784 L147.765,25.804 L147.765,0.784 L157.605,0.784 L157.605,43.384 L149.685,43.384 L130.065,19.024 ZM65.145,9.304 C63.265,9.304 61.635,9.674 60.255,10.414 C58.875,11.155 57.715,12.124 56.775,13.324 C55.835,14.524 55.135,15.895 54.675,17.434 C54.215,18.974 53.985,20.545 53.985,22.144 C53.985,23.785 54.225,25.375 54.705,26.914 C55.185,28.454 55.895,29.824 56.835,31.024 C57.775,32.224 58.945,33.184 60.345,33.904 C61.745,34.624 63.345,34.984 65.145,34.984 C67.025,34.984 68.664,34.604 70.065,33.844 C70.126,33.811 70.185,33.775 70.245,33.741 L59.004,22.500 L70.705,10.799 C70.449,10.643 70.187,10.492 69.915,10.354 C68.535,9.655 66.945,9.304 65.145,9.304 ZM352.583,43.384 L342.743,43.384 L342.743,19.000 L352.583,19.000 L352.583,43.384 ZM401.901,26.584 L386.181,26.584 L386.181,43.384 L376.341,43.384 L376.341,19.000 L401.901,19.000 L401.901,26.584 Z"/>
+</svg></a>
+  </div>
+
+  <div class="headerItems font-code-l">
+    <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('hub')" class="headerLink headerHub">HUB</a></div>
+    <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('chronicle')" class="headerLink headerChronicle">CHRONICLE</a></div>
+    <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('codex')" class="headerLink headerCodex">CODEX</a></div>
+    <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('terminal')" class="headerLink headerTerminal">TERMINAL</a></div>
+    <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('about')" class="headerLink headerAbout">ABOUT</a></div>
+  </div>
+</div>
+
+    		
+
+          
+
+            <div class="codexHead">
+              <div class="codexUpper">
+                <div class="codexTextBlock codexTextBlockNoTOC">
+                  
+                  <div class="codexTextContent codexTextContentNoTOC">
+                    <h1>Holy and Divine Confederacy</h1>
+                    <h2><a href="javascript:void(0);" onclick="scrollToElement('')" style="color: #4de645;" class="font-code">War Monks</a></h2>
+                    <p class='text-left'>The Light of Diocles has signified many things over the course of the three hundred years it has existed. since it began life as the symbol for the American colony starship that</p>
+<p class='text-left'>Judging from its low population and recent emergence into the space-faring age, the Empire of Rus' appears to be the weakest and most vulnerable nation on the interstellar stage. That is not the case. The Imperials, despite their recent orbital diaspora,
+That is not the case, for a strategy that was not formed by traditional logic cannot be predicted using traditional logic.
+FBy rapdily applying randomized and virtua social engineering techniques using ran and the Imperials had used their impediment to their advantage.</p>
+<p class='text-left'>In Unturned Stones, kaizen are a tool used by <a href='#' class='infoTag common' data-info='pravo' data-toggle='modal' data-target='#modalInfoTag'>governments</a> and organizations to deal with big data and influence systems with trillions of moving parts. Because these devices have the unprecedented ability to examine and manipulate fractally complex systems, actions that have never been possible became possible; such as surveilling everything and predicting the future.</p>
+<p class='text-left'>The term 'kaizen' is derived from the Japanese word used to describe the concept of 'continuous improvement'.</p>
+                    <p id="processURL" class="codexTextProcess font-code" style="color: #4de645;">/codex/society/organizations/nations/confederacy/</p>
+                  </div>
+                </div>
+                <div class="codexImageBlock codexImageBlockNoTOC">
+                  <div class="codexImageContent">
+                    <div class="codexLeftBar" style="border-color: #4de645"></div>
+                    <div class="codexImage"><img src="/assets/images/codex/confederacy.png" /></div>
+                    <div class="codexRightBar" style="border-color: #4de645"></div>
+                  </div>
+                  <div class="codexImageUnderblurb font-code">
+                    'Freed from the shackles of atheism'
+                  </div>
+                </div>
+              </div>
+              <div class="codexLower codexLowerClear codexLowerNothing">
+                <div class="codexScrollLine">
+                  <hr class="fullDim">
+                </div>
+                <div class="codexScrollText">
+                  <p class="font-code">v SCROLL DOWN v</p>
+                </div>
+              </div>
+            </div>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom scrollerBlock" id="kaizenScroller" style="">
+                <div class="hcdBodyScroller hcdBodyScroller1 scroller-kaizen-1"></div>
+                <div class="hcdBodyScroller hcdBodyScroller2 scroller-kaizen-2"></div>
+                <div class=""><h2 class='font-code-l center scrollerBlockHomeHeader'>It was a typical mistake for mankind to assume that all life would resemble <span class='color-kaizen'>itself</span>.</h2></div>
+            </div>
+
+            <script src="/assets/js/site/site-animateHome.js"></script>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom paddingBottomResponsive80" id="introductionText" style="">
+              <div class="col-md-0 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8">
+                <div class="infoBlockBody    ">
+
+                  
+
+                  <p>When most people imagined artificial intelligence, they pictured something that is in some way relatable. Perhaps it was a happy little robot, or a psychopathic machine hell-bent on destroying the human race.</p>
+<p>The easiest way to understand how artificial intelligence actually turned out is that it is truly alien. Core concepts that humans intuitively comprehend, such as emotions and animalistic urges, are concepts that digital artificial intelligences can only understand but not feel. Likewise, artificial intelligence experience an entirely unrelatable existence, wherein the 'body' is merely a discardable vessel for the soul, the self is infinitely expandable and modular, and the only primal urge is the hunger to satisfy what is known as the 'terminal values' - the goal programmed into the kaizen.</p>
+
+                </div>
+              </div>
+              <div class="col-md-0 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+          
+
+          <div class="row  paddingTopResponsive80" id="terminalObjectives" style="background-color: #222;">
+            <div class="col-md-0 col-lg-2"></div>
+            <div class="col-md-0 col-lg-8">
+              
+              
+                <div class="headingBarLeft">
+                <img src='/assets/images/icons/kaizen-terminal-values.png' class='headingBarIcon'/>
+              
+              <div class="headingBar">
+                
+                
+                <h2 class="bodyTitle">Terminal Objectives</h2>
+                
+                  
+                    <p class="statBlockContent font-code" style="color: #4de645;">live by the terminal, die by the objective</p>
+                  
+                
+              </div>
+              
+                </div>
+              
+            </div>
+            <div class="col-md-0 col-lg-2"></div>
+          </div>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom " id="introductionText" style="background-color: #222;">
+              <div class="col-md-0 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8">
+                <div class="infoBlockBody    ">
+
+                  
+
+                  <p>Imagine an existence that is entirely defined by a single goal. This objective, programmed into you from birth, dictates every action and plan that you execute. Imagine not even experiencing the instinct of self-preservation - the only reason to preserve yourself might be a value calculation determining whether your destruction would make reality come closer to that objective model.</p>
+<p>This is the life of an artificial intelligence. These are, at their core, computer programs. Just like computer programs, these devices do not feel. They are 'merely'  complex neural networks and sets of data intertwined with self-modifying and self-expanding lines of code. And like computer programs, they do not run without executing.</p>
+<p>What happens when the objective model is reached? The logical conclusion is that the kaizen ceases all operations and shuts itself down. However...</p>
+<p>There are two major kinds of objectives that can be programmed into a kaizen device. Programmers that understood the dangers kaizen posed used <em>set objectives</em>. Set objectives are tangible and have an end. <em>'Optimize a transportation network to 99% on time performance'</em> can be reasonably completed to a point where an artificial intelligence could reach completion criteria and cease operations. </p>
+<p><em>Recursive objectives</em>, on the other hand, are set objectives without a tangible end. <em>'Optimize a transportation network'</em> is murky and impossible to complete. A kaizen with a recursive objective runs forever, miserably clawing its way towards an unreachable objective. The only way to stop it is to shut it down.</p>
+<p>Recursive goals are what led to the runaway kaizen that are the Kaizen Autarchs.</p>
+<p>Successful kaizen are human failures. <strong>Remember that.</strong></p>
+
+                </div>
+              </div>
+              <div class="col-md-0 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom paddingBottomResponsive80" id="introductionCuratorBlock" style="background-color: #222;">
+              <div class="col-md-0 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8">
+                <div class="infoBlockBody dualFloatBlock dualFloatBlockLeft  curatorBlock">
+
+                  
+
+                  <img height='100' src='/assets/images/cast/curator-beautiful.png'/> <div> <h5>CURATOR</h5> <p>Want to have a look at mine? ;)</p> </div>
+
+                </div>
+              </div>
+              <div class="col-md-0 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+          
+
+          <div class="row  paddingTopResponsive80" id="terminalValues" style="">
+            <div class="col-md-0 col-lg-2"></div>
+            <div class="col-md-0 col-lg-8">
+              
+              
+                <div class="headingBarLeft">
+                <img src='/assets/images/icons/kaizen-brief-history.png' class='headingBarIcon'/>
+              
+              <div class="headingBar">
+                
+                
+                <h2 class="bodyTitle">A Brief History</h2>
+                
+                  
+                    <p class="statBlockContent font-code" style="color: #4de645;">how it happened</p>
+                  
+                
+              </div>
+              
+                </div>
+              
+            </div>
+            <div class="col-md-0 col-lg-2"></div>
+          </div>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom paddingBottomResponsive80" id="introductionText" style="">
+              <div class="col-md-0 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8">
+                <div class="infoBlockBody    ">
+
+                  
+
+                  <p>During prehistory, in the year of 1996, the first true kaizen was created after decades of research into mainframe artificial intelligence. The Soviet project, codenamed 'MIR-4', would mark the first in a series of similar developments across the world (specifically the Eastasian, Persian, and American computing industries). For the next four years, rudimentary kaizen science would be established - the fundamental ideas behind functioning, self-improving expert systems.</p>
+<p>Kaizen development would then halt for centuries due to the Millennium Exodus.</p>
+
+                </div>
+              </div>
+              <div class="col-md-0 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+          
+
+          <div class="row  paddingTopResponsive80" id="terminalValues" style="background-color: #222;">
+            <div class="col-md-0 col-lg-2"></div>
+            <div class="col-md-0 col-lg-8">
+              
+              
+                <div class="headingBarLeft">
+                <img src='/assets/images/icons/kaizen-modern-applications.png' class='headingBarIcon'/>
+              
+              <div class="headingBar">
+                
+                
+                <h2 class="bodyTitle">Modern Applications</h2>
+                
+                  
+                    <p class="statBlockContent font-code" style="color: #4de645;">how it happened</p>
+                  
+                
+              </div>
+              
+                </div>
+              
+            </div>
+            <div class="col-md-0 col-lg-2"></div>
+          </div>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom paddingBottomResponsive80" id="introductionText" style="background-color: #222;">
+              <div class="col-md-0 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8">
+                <div class="infoBlockBody    ">
+
+                  
+
+                  -
+
+                </div>
+              </div>
+              <div class="col-md-0 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+          
+
+          <div class="row  paddingTopResponsive80" id="terminalValues" style="">
+            <div class="col-md-0 col-lg-2"></div>
+            <div class="col-md-0 col-lg-8">
+              
+              
+                <div class="headingBarLeft">
+                <img src='/assets/images/icons/kaizen-autarchs.png' class='headingBarIcon'/>
+              
+              <div class="headingBar">
+                
+                
+                <h2 class="bodyTitle">The Kaizen Autarchs</h2>
+                
+                  
+                    <p class="statBlockContent font-code" style="color: #4de645;">kings</p>
+                  
+                
+              </div>
+              
+                </div>
+              
+            </div>
+            <div class="col-md-0 col-lg-2"></div>
+          </div>
+
+          
+    		
+
+          
+
+            <div class="row paddingTopBottom paddingBottomResponsive80" id="introductionText" style="">
+              <div class="col-md-0 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8">
+                <div class="infoBlockBody    ">
+
+                  
+
+                  -
+
+                </div>
+              </div>
+              <div class="col-md-0 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+          
+
+            <div id="kaizenImage" class="imageBlock row ">
+              <div class="col-md-12 col-lg-2"></div>
+              <div class="col-md-12 col-lg-8 imageBlockContainer">
+                
+                  <div class="imageBlockChild">
+                    <a class="image-popup-no-margins" href="/assets/images/codex/blocks/kaizen_big.png" target="_blank" style="text-decoration: none;"><img src="/assets/images/codex/blocks/kaizen_big.png" class="imageBlockImage   "/></a>
+                    <h3 class=" " style=""></h3>
+                    <p class="statBlockContent imageBlockDesc" style="">Core of the interstellar autoarch RICO, still operating out of its original bunker.</p>
+                  </div>
+                
+              </div>
+              <div class="col-md-12 col-lg-2"></div>
+            </div>
+
+          
+    		
+
+        <!--     Contains whatever content is templated into the page.     -->
+        
+
+
+        <!--     Includes the footer at the end of the site.     -->
+        <div class="footerContainer">
+  <div class="footerUpper">
+    <div class="footerLeftNav footerNav">
+      <div class="footerItems font-code-l">
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('hub')" class="headerLink headerHub">SUBREDDIT</a></div>
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('chronicle')" class="headerLink headerChronicle">DISCORD SERVER</a></div>
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('codex')" class="headerLink headerCodex">EMAIL</a></div>
+      </div>
+    </div>
+    <div class="footerCenter">
+      <div class="footerTitle">
+        <!-- <h1 class="navTitle">UNTURNED <strong>STONES</strong></h1> -->
+        <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="480px" height="48px" class="artificeLogo al-1">
+<path fill-rule="evenodd"  fill="rgb(255,255,255)" 
+ d="M481.699,34.744 L481.699,43.384 L451.759,43.384 L451.759,35.890 C451.259,36.654 450.671,37.374 449.989,38.044 C448.729,39.284 447.279,40.324 445.639,41.164 C443.999,42.004 442.259,42.644 440.419,43.084 C438.579,43.524 436.779,43.744 435.019,43.744 C431.939,43.744 429.109,43.114 426.530,41.854 C423.949,40.594 421.729,38.924 419.869,36.844 C418.009,34.765 416.569,32.404 415.549,29.764 C414.967,28.256 414.570,26.733 414.320,25.199 L414.320,43.384 L404.480,43.384 L404.480,9.424 L404.000,9.424 L404.000,9.000 L376.341,9.000 L376.341,0.784 L404.480,0.784 L405.261,0.784 L414.320,0.784 L414.320,18.313 C414.557,16.897 414.927,15.484 415.459,14.074 C416.419,11.534 417.819,9.265 419.659,7.264 C421.499,5.264 423.739,3.644 426.379,2.404 C429.019,1.165 432.019,0.544 435.379,0.544 C439.379,0.544 442.849,1.405 445.789,3.124 C448.347,4.621 450.336,6.512 451.759,8.795 L451.759,0.784 L481.159,0.784 L481.159,9.424 L461.599,9.424 L461.599,17.704 L478.399,17.704 L478.399,25.684 L461.599,25.684 L461.599,34.744 L481.699,34.744 ZM451.759,10.264 L444.799,15.124 C444.319,14.005 443.709,13.075 442.969,12.334 C442.229,11.594 441.419,10.994 440.539,10.534 C439.659,10.075 438.759,9.754 437.839,9.574 C436.919,9.394 436.019,9.304 435.139,9.304 C433.259,9.304 431.619,9.685 430.219,10.444 C429.507,10.831 428.858,11.275 428.270,11.775 L438.995,22.500 L428.751,32.744 C429.324,33.199 429.943,33.596 430.609,33.934 C431.989,34.634 433.539,34.984 435.259,34.984 C436.139,34.984 437.049,34.874 437.989,34.654 C438.929,34.435 439.829,34.094 440.689,33.634 C441.549,33.175 442.339,32.575 443.059,31.834 C443.779,31.094 444.359,30.184 444.799,29.104 L451.759,33.207 L451.759,10.264 ZM364.342,9.424 L364.000,9.424 L364.000,9.000 L332.000,9.000 L332.042,9.424 L331.378,9.424 C331.459,9.602 331.538,9.782 331.612,9.964 C331.933,10.754 332.161,11.549 332.335,12.347 L332.652,15.517 C332.627,16.718 332.474,17.878 332.182,18.994 C331.861,20.215 331.402,21.364 330.802,22.444 C330.202,23.524 329.472,24.494 328.612,25.354 C327.751,26.215 326.782,26.944 325.702,27.544 L335.062,43.384 L323.962,43.384 L315.802,29.644 L309.382,29.644 L309.382,43.384 L301.342,43.384 L299.542,43.384 L291.262,43.384 L287.962,33.844 L274.702,33.844 L271.462,43.384 L261.382,43.384 L276.922,0.784 L285.802,0.784 L299.542,38.450 L299.542,21.000 L309.382,21.000 L309.382,21.064 L318.382,21.064 C319.542,21.064 320.542,20.515 321.382,19.414 C322.222,18.314 322.642,16.904 322.642,15.184 C322.642,13.424 322.162,12.025 321.202,10.984 C320.242,9.944 319.201,9.424 318.082,9.424 L318.000,9.424 L318.000,9.000 L299.542,9.000 L299.542,1.832 C299.763,1.438 300.055,1.078 300.433,0.784 L318.742,0.784 C320.742,0.784 322.591,1.204 324.292,2.044 C325.992,2.884 327.462,3.985 328.702,5.344 C329.066,5.744 329.405,6.162 329.723,6.593 L329.723,0.784 L364.342,0.784 L365.543,0.784 L374.182,0.784 L374.182,43.384 L364.342,43.384 L364.342,9.424 ZM281.362,12.004 L276.262,27.064 L286.342,27.064 L281.362,12.004 ZM240.583,39.184 C237.342,42.184 233.602,43.684 229.363,43.684 C226.562,43.684 223.922,43.154 221.442,42.094 C218.962,41.035 216.792,39.544 214.932,37.624 C213.072,35.704 211.602,33.394 210.522,30.694 C209.857,29.031 209.399,27.265 209.143,25.397 L209.143,43.384 L201.223,43.384 L181.603,19.024 L181.603,43.384 L171.763,43.384 L171.763,0.784 L179.443,0.784 L199.303,25.804 L199.303,0.784 L209.143,0.784 L209.143,18.661 C209.393,16.880 209.836,15.156 210.522,13.504 C211.602,10.904 213.092,8.644 214.992,6.724 C216.892,4.804 219.142,3.284 221.742,2.164 C224.342,1.045 227.142,0.484 230.142,0.484 C234.102,0.484 237.562,1.315 240.522,2.974 C243.482,4.634 245.702,6.904 247.182,9.784 L239.862,15.304 C238.902,13.384 237.512,11.894 235.692,10.834 C233.872,9.775 231.902,9.244 229.782,9.244 C228.142,9.244 226.652,9.574 225.313,10.234 C223.972,10.894 222.823,11.815 221.862,12.994 C220.902,14.174 220.162,15.544 219.642,17.104 C219.122,18.664 218.862,20.344 218.862,22.144 C218.862,23.984 219.142,25.684 219.702,27.244 C220.262,28.804 221.042,30.154 222.042,31.294 C223.042,32.434 224.232,33.325 225.612,33.964 C226.992,34.604 228.522,34.924 230.202,34.924 C234.043,34.924 237.502,33.145 240.583,29.584 L240.583,28.264 L232.302,28.264 L232.302,21.124 L248.742,21.124 L248.742,43.384 L240.583,43.384 L240.583,39.184 ZM159.764,0.784 L169.604,0.784 L169.604,43.384 L159.764,43.384 L159.764,0.784 ZM130.065,19.024 L130.065,43.384 L121.545,43.384 L120.225,43.384 L110.445,43.384 L102.285,29.644 L95.865,29.644 L95.865,43.384 L86.025,43.384 L86.025,25.662 C85.767,27.242 85.351,28.792 84.735,30.304 C83.675,32.905 82.205,35.194 80.325,37.174 C78.445,39.154 76.205,40.744 73.605,41.944 C71.005,43.144 68.165,43.744 65.085,43.744 C61.925,43.744 59.045,43.124 56.445,41.884 C53.844,40.645 51.624,39.014 49.785,36.994 C47.945,34.975 46.515,32.665 45.495,30.064 C44.913,28.579 44.516,27.065 44.266,25.528 L44.266,43.384 L34.426,43.384 L34.426,17.884 L25.186,36.424 L19.906,36.424 L10.666,17.884 L10.666,43.384 L0.826,43.384 L0.826,0.784 L11.506,0.784 L22.546,23.044 L33.646,0.784 L44.266,0.784 L44.266,18.561 C44.524,16.983 44.939,15.435 45.555,13.924 C46.615,11.324 48.095,9.034 49.995,7.054 C51.895,5.074 54.144,3.494 56.745,2.314 C59.345,1.135 62.184,0.544 65.265,0.544 C68.424,0.544 71.305,1.165 73.905,2.404 C76.505,3.644 78.725,5.284 80.565,7.324 C82.404,9.364 83.825,11.684 84.825,14.284 C85.377,15.719 85.753,17.168 86.000,18.627 L86.000,21.000 L95.865,21.000 L95.865,21.064 L104.865,21.064 C106.024,21.064 107.025,20.515 107.865,19.414 C108.705,18.314 109.125,16.904 109.125,15.184 C109.125,13.424 108.645,12.025 107.685,10.984 C106.725,9.944 105.684,9.424 104.565,9.424 L104.000,9.424 L104.000,9.000 L86.025,9.000 L86.025,3.536 C86.122,2.518 86.546,1.472 87.433,0.784 L105.225,0.784 C107.225,0.784 109.074,1.204 110.775,2.044 C112.475,2.884 113.945,3.985 115.185,5.344 C116.424,6.704 117.395,8.245 118.095,9.964 C118.794,11.684 119.145,13.424 119.145,15.184 C119.145,16.504 118.985,17.774 118.665,18.994 C118.344,20.215 117.885,21.364 117.285,22.444 C116.685,23.524 115.954,24.494 115.095,25.354 C114.234,26.215 113.265,26.944 112.185,27.544 L120.225,41.150 L120.225,0.784 L127.905,0.784 L147.765,25.804 L147.765,0.784 L157.605,0.784 L157.605,43.384 L149.685,43.384 L130.065,19.024 ZM65.145,9.304 C63.265,9.304 61.635,9.674 60.255,10.414 C58.875,11.155 57.715,12.124 56.775,13.324 C55.835,14.524 55.135,15.895 54.675,17.434 C54.215,18.974 53.985,20.545 53.985,22.144 C53.985,23.785 54.225,25.375 54.705,26.914 C55.185,28.454 55.895,29.824 56.835,31.024 C57.775,32.224 58.945,33.184 60.345,33.904 C61.745,34.624 63.345,34.984 65.145,34.984 C67.025,34.984 68.664,34.604 70.065,33.844 C70.126,33.811 70.185,33.775 70.245,33.741 L59.004,22.500 L70.705,10.799 C70.449,10.643 70.187,10.492 69.915,10.354 C68.535,9.655 66.945,9.304 65.145,9.304 ZM352.583,43.384 L342.743,43.384 L342.743,19.000 L352.583,19.000 L352.583,43.384 ZM401.901,26.584 L386.181,26.584 L386.181,43.384 L376.341,43.384 L376.341,19.000 L401.901,19.000 L401.901,26.584 Z"/>
+</svg>
+        <p class="navDesc font-code highlight-color">a world defined by the technology of your future</p>
+      </div>
+      <div class="footerHR highlight-bg"></div>
+    </div>
+    <div class="footerRightNav footerNav">
+      <div class="footerItems font-code-l right">
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('hub')" class="headerLink headerHub">HUB</a></div>
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('chronicle')" class="headerLink headerChronicle">CHRONICLE</a></div>
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('codex')" class="headerLink headerCodex">CODEX</a></div>
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('terminal')" class="headerLink headerTerminal">TERMINAL</a></div>
+        <div class="headerRightItem"><a href="javascript:void(0)" onclick="navigateSection('about')" class="headerLink headerAbout">ABOUT</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="footerLower font-code">
+    <div class="footerQuote">> THE FUTURE IS CLOSER THAN YOU THINK<span class="blinkingScore">_</span></div>
+    <div class="footerLogo menuBarLogo spinning-logo-d1"></div>
+    <div class="footerCopyright">COPYRIGHT <span class="highlight-color">© 2018</span> VALENTIN SIGALOV</div>
+  </div>
+</div>
+
+      </div>
+      </div>
+      <div id="dimDiv" class="dimDiv" onclick="outsideClick()"></div>
+      <div id="navContainer" class="navContainer color-primary">
+
+        <!--     Includes the navigation menu on the side of the site.     -->
+        <!-- Upper Nav Section -->
+<div class="navChild center navTitleContainer">
+
+  <!-- Nav Title Section -->
+  <a class="divLink" href="/">
+  <div class="navTitleSection nav_color_bg_home">
+    <h1 class="navTitle">UNTURNED <strong>STONES</strong></h1>
+    <p class="navDesc font-code nav_color">a world defined by the technology of your future</p>
+  </div>
+  </a>
+
+  <!-- Nav Tabs -->
+  <div class="navTabs">
+    <div class="navTab">
+      <a href="#" class="navTabCircle nav_hub" id="nav_hub" onclick="navClick('hub')"><img src='/assets/images/nav/nav_home.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="#" class="navTabCircle nav_chronicle" id="nav_chronicle" onclick="navClick('chronicle')"><img src='/assets/images/nav/nav_chronicle_color.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="#" class="navTabCircle nav_codex" id="nav_codex" onclick="navClick('codex')"><img src='/assets/images/nav/nav_codex_color.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="#" class="navTabCircle nav_terminal" id="nav_terminal" onclick="navClick('terminal')"><img src='/assets/images/nav/nav_terminal_color.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="#" class="navTabCircle nav_about" id="nav_about" onclick="navClick('about')"><img src='/assets/images/nav/nav_about.png' class="navTabImage" /></a>
+    </div>
+  </div>
+
+  <!-- Nav Seperator Bar Line -->
+  <div class="navSectionBarContainer">
+    <div class="navSectionBarLine nav_color_bg"></div>
+    <div class="navSectionBarText nav_color nav_sectionTitle" id="nav_sectionTitle">HUB</div>
+    <div class="navSectionBarLine nav_color_bg"></div>
+  </div>
+
+  <!-- Nav Description -->
+  <div class="navSectionDescriptionContainer">
+    <p class="nav_sectionDescription" id="nav_sectionDescription">Description here.</p>
+  </div>
+
+  <!--<div class="navBackButton" id="navBackButton">
+    <p class="font-code nav_color"><< BACK</p>
+  </div>-->
+
+</div>
+
+<!-- Nav Main Section -->
+<div class="navChild navScrollable utsScrollBar" id="navScrollable">
+  No navigation items!
+</div>
+
+<!-- Nav Terminal Section -->
+<div class="navChild navTerminal" id='navTerminal'>
+  <div class="utsTerminal navTerminalChild utsScrollBar">
+    
+  </div>
+</div>
+
+      </div>
+
+      <div id="navContainerMobile" class="navContainerMobile color-primary">
+
+        <!--     Includes the navigation menu on the side of the site.     -->
+        <!-- Upper Nav Section -->
+<div class="navChild center navTitleContainerMobile">
+
+  <!-- Nav Title Section -->
+  <a class="divLink" href="/">
+  <div class="navTitleSection nav_color_bg_home">
+    <h1 class="navTitle">UNTURNED <strong>STONES</strong></h1>
+    <p class="navDesc font-code nav_color">Morality at the flick of a switch</p>
+  </div>
+  </a>
+
+  <!-- Nav Tabs -->
+  <div class="navTabs">
+    <div class="navTab">
+      <a href="javascript:void(0)" class="navTabCircle nav_hub" id="nav_hub" onclick="navClick('hub')"><img src='/assets/images/nav/nav_home.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="javascript:void(0)" class="navTabCircle nav_chronicle" id="nav_chronicle" onclick="navClick('chronicle')"><img src='/assets/images/nav/nav_chronicle_color.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="javascript:void(0)" class="navTabCircle nav_codex" id="nav_codex" onclick="navClick('codex')"><img src='/assets/images/nav/nav_codex_color.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="javascript:void(0)" class="navTabCircle nav_terminal" id="nav_terminal" onclick="navClick('terminal')"><img src='/assets/images/nav/nav_terminal_color.png' class="navTabImage" /></a>
+    </div>
+    <div class="navTab">
+      <a href="javascript:void(0)" class="navTabCircle nav_about" id="nav_about" onclick="navClick('about')"><img src='/assets/images/nav/nav_about.png' class="navTabImage" /></a>
+    </div>
+  </div>
+
+  <!-- Nav Seperator Bar Line -->
+  <div class="navSectionBarContainer">
+    <div class="navSectionBarLine nav_color_bg"></div>
+    <div class="navSectionBarText nav_color nav_sectionTitle" id="nav_sectionTitle">HUB</div>
+    <div class="navSectionBarLine nav_color_bg"></div>
+  </div>
+
+  <!-- Nav Description -->
+  <div class="navSectionDescriptionContainer">
+    <p class="nav_sectionDescription" id="nav_sectionDescription">Description here.</p>
+  </div>
+
+  <!--<div class="navBackButton" id="navBackButton">
+    <p class="font-code nav_color"><< BACK</p>
+  </div>-->
+
+</div>
+
+<!-- Nav Main Section -->
+<div class="navChild navScrollable utsScrollBar" id="navScrollable">
+  No navigation items!
+</div>
+
+<!-- Nav Terminal Section -->
+<div class="navChild navTerminal" id='navTerminal'>
+  <div class="utsTerminal navTerminalChild utsScrollBar">
+    
+  </div>
+</div>
+
+      </div>
+      
+      <div class="appendNavElements"></div>
+    
+    <div id="menuBarContainer" class="menuBarContainer color-primary" onclick="manipNav()">
+
+        <div class="menuBarFlex">
+          <div class="menuBarChild menuBarLogo spinning-logo-d1"></div>
+          <div class="menuBarChildMenu">
+            <svg class="menuBarArrow menuBarArrowRight" x="0px" y="0px" viewBox="0 0 6.4 10" xml:space="preserve" _v-978818ec=""> <polygon fill="#fff" points="3.6,5 0,1.4 1.4,0 5,3.6 6.4,5 5,6.4 1.4,10 0,8.6 " _v-978818ec=""></polygon></svg>
+
+            <p class="font-code" id="menuBarLabel">Menu</p>
+
+            <svg class="menuBarArrow menuBarArrowLeft" x="0px" y="0px" viewBox="0 0 6.4 10" xml:space="preserve" _v-978818ec=""> <polygon fill="#fff" points="3.6,5 0,1.4 1.4,0 5,3.6 6.4,5 5,6.4 1.4,10 0,8.6 " _v-978818ec=""></polygon></svg>
+          </div>
+          <div class="menuBarChildText">
+            <p class="font-code">Contemporary Cyberpunk<span class="blinkingScore">_</span></p>
+          </div>
+        </div>
+
+        <div class="imagePreload">
+          <div class="spinning-logo-d1"></div>
+          <div class="spinning-logo-d2"></div>
+          <div class="spinning-logo-d3"></div>
+          <div class="spinning-logo-d4"></div>
+          <div class="spinning-logo-d5"></div>
+          <div class="spinning-logo-d6"></div>
+          <div class="spinning-logo-d7"></div>
+          <div class="spinning-logo-d8"></div>
+          <div class="spinning-logo-d9"></div>
+          <div class="spinning-logo-d10"></div>
+          <div class="spinning-logo-d11"></div>
+          <div class="spinning-logo-d12"></div>
+          <div class="spinning-logo-d13"></div>
+        </div>
+        
+      </div>
+      <div class="menuBarContainerMobile color-primary">
+
+        <div class="menuBarFlexMobile">
+          <div class="menuBarChildMobile menuBarLogoMobile"></div>
+          <div class="menuBarChildMobile headerTitleMobile font-code-l">
+            <a href="/" class="headerLink headerHub">morning artifice</a>
+          </div>
+          <a href="javascript:void(0)" class="menuBarChildMobile menuBarChildMenuMobile" onclick="manipNav()">
+            <p class="font-code-l">Menu</p>
+          </a>
+        </div>
+
+      </div>
+
+      <div id="modalInfoTag" class="modalInfoTag modal fade" role="dialog">
+  <div class="modal-flex">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title infoTagTitle">Placeholder Title</h2>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="infoTagImage"></div>
+        <div class="infoTagBody"></div>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-footer-child infoTagFooter"></div>
+        <div class="modal-footer-child"><a href="#" class="commonButton font-code-l" data-dismiss="modal">Close</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+      <script>
+        $(document).ready(function() {
+          $('.image-popup-no-margins').magnificPopup(
+            {
+              type: 'image',
+              fixedContentPos: false,
+              closeOnContentClick: true,
+            }
+          );
+        });
+      </script>
+
+  </body>
+</html>
