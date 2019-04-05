@@ -16,9 +16,9 @@ page_features: [
                       "personal-transport",
                       "computers",
                       "kerastoxis",
-                      "productive-life",
                       "powered-firearms",
                       "everyware",
+                      "productive-life",
                     ],
                   }
                 },
