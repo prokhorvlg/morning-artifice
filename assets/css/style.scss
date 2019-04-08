@@ -902,7 +902,7 @@ body {
 }
 @media (max-width: 991px) {
   .spinContainerOuter {
-    min-height: 50vh;
+    min-height: calc(100vh - 106px);
   }
 }
 .spinContainer {
