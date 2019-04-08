@@ -2900,6 +2900,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 @media (max-width: 991px) {
   .codexTextContent h1 {
     text-align: center;
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
   }
 }
 .codexTextContent h2 {
