@@ -7,14 +7,21 @@ $(document).ready(function(){
   function updateTerminal(update) {
     $('.navTerminalChild').terminal().echo(update);
   }
-  function randomizeEcho(items, multi = 300) {
-    $('.navTerminalChild').terminal().echo(items[0]);
-    if (items[1]) {
-      setTimeout(function() { randomizeEcho(items.slice(1), multi); }, Math.floor(Math.random() * multi));
-    }
-  }
+  
   jQuery(function($, undefined) {
     $('.navTerminalChild').terminal(function(command) {
+      function randomizeEcho(obj, items, multi = 300) {
+        // Echo the first item.
+        obj.echo(items[0]);
+        // If there are any other items...
+        if (items[1]) {
+          // Recursively echo this with the first item stripped out,
+          setTimeout(function() {
+            randomizeEcho(obj, items.slice(1), multi); 
+            // With the delay equal to a slight variation on multiplier.
+          }, Math.floor(Math.random() * multi));
+        }
+      }
       if (command !== '') {
 
         var cmd = command.toUpperCase().split(" ");
@@ -40,41 +47,38 @@ $(document).ready(function(){
             }
           }
           else {
-            this.echo('***************************************');
-            this.echo('** Application [[b;#00ffff;]LOW YIELD DAEMON] v2.3 **');
-            this.echo('** developed by [[b;#ff00ff;]metakun technologies] **');
-            this.echo('***************************************');
-            this.echo('used to host decentralized kaizen');
+            randomizeEcho(this, [
+              '***************************************',
+              '** Application [[b;#00ffff;]LOW YIELD DAEMON] v2.3 **',
+              '** developed by [[b;#ff00ff;]metakun technologies] **',
+              '***************************************',
+              'used to host decentralized kaizen',
+            ], 300);
           }
         }
         else if (cmd[0] == 'READ') {
-          if (cmd[1]) {
-            if (cmd[1] == 'MANTRA' || cmd[1] == 'MANTRA.A' ) {
-              randomizeEcho(['lie','cheat','steal','kill','win','win','...','Everybody doin it'], 300);
-            }
-          }
-          else {
-            this.echo('// Application 9m [[b;#00ffff;]SECUREADER] 4tb //');
-            this.echo('for all your file-reading needs');
-            this.echo('comes standard with [[b;#00ffff;]NUT] since 3.01');
-          }
+          randomizeEcho(this, [
+              '// Application 9m [[b;#00ffff;]SECUREADER] 4tb //',
+              'for all your file-reading needs',
+              'comes standard with [[b;#00ffff;]NUT] since 3.01',
+            ], 300);
         }
         else if (cmd[0] == 'HELP') {
-          randomizeEcho(['Locating [[b;#00ff36;]help] file...',
+          randomizeEcho(this, ['Locating [[b;#00ff36;]help] file...',
             'message found: >Fuck off<',
             'File path corrupted. Please consult an administrator.',
             '[[b;#ff00ff;]Help file not found]'], 500);
         }
         else if (cmd[0] == 'PING') {
-          randomizeEcho(['To use this application',
+          randomizeEcho(this, ['To use this application',
             '---'], 500);
         }
         else if (cmd[0] == 'CHAT') {
-          randomizeEcho(['This kaizen is currently offline.',
+          randomizeEcho(this, ['This kaizen is currently offline.',
             'Exiting application.'], 800);
         }
         else if (cmd[0] == 'SWEDUS') {
-          randomizeEcho(['GAME VER 5.2',
+          randomizeEcho(this, ['GAME VER 5.2',
             'This application is currently in development.'], 800);
         }
         else if (cmd[0] == 'SAXX') {

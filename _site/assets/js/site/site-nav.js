@@ -378,7 +378,7 @@ function compileNavObjectSlideout(currentHeading) {
       <div class='navBackButton' onclick='closeNavObject(\""+ currentHeading + "\")'>\
         <p class='font-code nav_color'><< BACK</p>\
       </div>\
-      <h1 class='navTitle allCaps'>"+ window.headings[currentHeading]['title'] + "</h1>\
+      <h2 class='navTitle'>"+ window.headings[currentHeading]['title'] + "</h2>\
       <p class='navHeadingDetails'>" + window.headings[currentHeading]['details'] + "</p>\
       <div class='navChild navScrollable utsScrollBar'>\
         " + buttonsInThisNav + "\
@@ -566,7 +566,7 @@ function loadFeaturedHome() {
   $targetEl.children('.quote').first().children('p').first().html(quote);
   $targetEl.children('.quote').first().children('p').first().css('color',page_highlight);
   $targetEl.children('.line').css('background',page_highlight);
-  $targetEl.children('.title').first().children('p').first().html(title);
+  $targetEl.children('.title').first().children('p').first().html(title).css('color',page_highlight);
   $targetEl.children('.image').first().children('img').first().attr("src",image);
 
   $targetEl.css('opacity','1');

@@ -114,7 +114,7 @@ layout: blank_page
                   </div>
                   {% endif %}
                   <div class="codexTextContent {% if item.init.no_toc == true %}codexTextContentNoTOC{% endif %}">
-                    <h1>{{ item.init.title }}</h1>
+                    <h1 data-text="{{ item.init.title }}" style="background-image: -webkit-linear-gradient({{ page.page_highlight }}, {% if item.init.page_highlight_2 %} {{ page.page_highlight_2 }} {% else %} {{ page.page_highlight }} {% endif %});">{{ item.init.title }}</h1>
                     <h2><a href="javascript:void(0);" onclick="scrollToElement('{{ item.init.flavor_url }}')" style="color: {{ page.page_highlight }};" class="font-code">{{ item.init.flavor }}</a></h2>
                     {{ item.init.description }}
                     <p id="processURL" class="codexTextProcess font-code" style="color: {{ page.page_highlight }};">{{ page.url }}</p>
@@ -149,6 +149,23 @@ layout: blank_page
                 
                 <div class="ma-logo-blur">
                   </div>
+                  <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="728px" height="10px" style="position: absolute;" class="ma-logo-sidelines">
+<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M84.000,4.000 L4.000,4.000 "/>
+<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M642.000,4.000 L722.000,4.000 "/>
+</svg>
+
+                  <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="291px" height="253px" class="ma-logo-tri" style="position: absolute;">
+<path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M162.941,36.643 C151.457,16.851 144.000,4.000 144.000,4.000 C144.000,4.000 104.391,72.751 67.309,137.114 M56.256,156.298 C28.074,205.214 4.000,247.000 4.000,247.000 L285.000,247.000 C285.000,247.000 276.700,232.696 264.128,211.029 "/>
+</svg>
                   <svg
                    xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -203,15 +220,19 @@ layout: blank_page
                     </g> 
                   -->
                 
-
               </div> <!-- end spinContainerOuter -->
 
-              <div class="homeArrowDown">
-                
+              <!-- Scroll down icon -->
+              <div class="ma-scroll-down">
+                <div class="ma-scroll-down-line ma-scroll-down-1"></div>
+                <div class="ma-scroll-down-line ma-scroll-down-2"></div>
+                <div class="ma-scroll-down-tri"></div>
+                <div class="ma-scroll-down-line ma-scroll-down-3"></div>
+                <div class="ma-scroll-down-line ma-scroll-down-4"></div>
               </div>
 
               <!-- homeSocial -->
-              <div class="homeButtons font-code-l" id="homeSocial">
+              <div class="homeButtons font-code-l" id="homeSocial-ma">
                   <div class="homeButtonsInset homeSocial">
                     <a class="divLink homeButtonLink" href="https://www.reddit.com/r/worldbuilding/" target="_blank">
                     <div class="homeButton">
@@ -335,6 +356,11 @@ layout: blank_page
 
                 </div>
               </div>
+
+              <!--<div class="homeArrowDown">
+                <div class="homeArrowLine"></div>
+                <div class="homeArrowTri"></div>
+              </div>-->
 
             </div> <!-- end fullHomeContainer -->
 
@@ -462,27 +488,71 @@ layout: blank_page
                   data-parallax-speed="-0.4" 
                   data-parallax-offset="50%">
                 <div class="homeContentSpacing homeContentCode">
-                  <div class="homeContentCodeContent scrollCheck fadeInCodeParas">
-                    <p>*** WELCOME TO <span class="color-secondaryAccent">NUT</span> 3.88 ***</p>
-                    <p>LOADING ORGANIZATIONAL_MATRIX...</p>
-                    <p>&nbsp;</p>
-                    <p><span class="color-primaryAccent">\\></span> RUN CURATOR.EXE</p>
-                    <p>ENTER PASSWORD: ***************************************************</p>
-                    <p>RE-ENTER PASSWORD: ***************************************************</p>
-                    <p><span class="color-positiveAccent">ACCEPTED</span></p>
-                    <p>LOADING <span class="color-primaryAccent">CURATOR</span></p>
-                    <p>c@neutral <span class="color-primaryAccent">~ >></span> HI!</p>
-                    <p>c@neutral <span class="color-primaryAccent">~ >></span> OH, WAIT.</p>
-                    <p>&nbsp;</p>
-                    <p>c@neutral <span class="color-primaryAccent">~ >></span> COMPILERR -P P.AL </p>
-                    <p>FILE FOUND</p>
-                    <p>GENERATING OBJECT...</p>
-                    <p>GRAPHICAL OBJECT GENERATED <span class="color-positiveAccent">SUCCESS</span></p>
-                    <p>c@neutral <span class="color-primaryAccent">~ >></span> ONE MORE THING...</p>
-                    <p>&nbsp;</p>
-                    <p>c@neutral <span class="color-primaryAccent">~ >></span> DISPLAYGUI -D F9000:233:00001</p>
-                    <p>Locating device...</p>
-                    <p>PUSHING DDS BY DHIA:8080...</p>
+                  <div class="homeContentParas scrollCheck fadeInCodeParas">
+                    <div class="ma-para-1-bg">
+                      <div class="ma-para-1-img">
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="246px" height="145px">
+ <defs>
+                      <linearGradient id="ma-para-1-gradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="-10%" stop-color="rgb(255,0,255)" stop-opacity="1" />
+                        <stop offset="110%" stop-color="rgb(0,255,255)" stop-opacity="1" />
+                      </linearGradient>
+                    </defs>
+
+                    <g stroke="url(#ma-para-1-gradient)">
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M232.915,3.727 C237.529,3.727 241.269,7.474 241.269,12.095 L241.269,131.765 C241.269,136.387 237.529,140.134 232.915,140.134 L12.085,140.134 C7.471,140.134 3.731,136.387 3.731,131.765 L3.731,12.095 C3.731,7.474 7.471,3.727 12.085,3.727 L232.915,3.727 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M14.660,9.050 C17.588,9.050 19.961,11.426 19.961,14.359 C19.961,17.291 17.588,19.668 14.660,19.668 C11.732,19.668 9.359,17.291 9.359,14.359 C9.359,11.426 11.732,9.050 14.660,9.050 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M14.660,124.457 C17.588,124.457 19.961,126.834 19.961,129.766 C19.961,132.698 17.588,135.075 14.660,135.075 C11.732,135.075 9.359,132.698 9.359,129.766 C9.359,126.834 11.732,124.457 14.660,124.457 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M231.340,9.050 C234.268,9.050 236.641,11.426 236.641,14.359 C236.641,17.291 234.268,19.668 231.340,19.668 C228.412,19.668 226.039,17.291 226.039,14.359 C226.039,11.426 228.412,9.050 231.340,9.050 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M231.340,124.457 C234.268,124.457 236.641,126.834 236.641,129.766 C236.641,132.698 234.268,135.075 231.340,135.075 C228.412,135.075 226.039,132.698 226.039,129.766 C226.039,126.834 228.412,124.457 231.340,124.457 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M77.516,118.192 C82.122,118.192 85.856,121.945 85.856,126.574 C85.856,131.204 82.122,134.957 77.516,134.957 C72.910,134.957 69.177,131.204 69.177,126.574 C69.177,121.945 72.910,118.192 77.516,118.192 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M103.837,122.973 L106.069,122.973 C108.911,122.973 111.215,125.277 111.215,128.119 L111.215,128.134 C111.215,130.976 108.911,133.280 106.069,133.280 L103.837,133.280 C100.995,133.280 98.690,130.976 98.690,128.134 L98.690,128.119 C98.690,125.277 100.995,122.973 103.837,122.973 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M167.658,118.352 C163.051,118.352 159.317,122.098 159.317,126.720 C159.317,131.342 163.051,135.089 167.658,135.089 C172.265,135.089 176.000,131.342 176.000,126.720 C176.000,122.098 172.265,118.352 167.658,118.352 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M143.746,123.094 L136.794,123.094 C135.259,123.094 134.014,124.343 134.014,125.883 L134.014,130.626 C134.014,132.166 135.259,133.415 136.794,133.415 L143.746,133.415 C145.281,133.415 146.526,132.166 146.526,130.626 L146.526,125.883 C146.526,124.343 145.281,123.094 143.746,123.094 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M47.730,139.134 L57.755,111.402 L187.400,111.541 L197.410,139.273 "/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M167.763,45.796 C178.995,45.796 188.100,54.915 188.100,66.163 C188.100,77.411 178.995,86.530 167.763,86.530 C156.531,86.530 147.426,77.411 147.426,66.163 C147.426,54.915 156.531,45.796 167.763,45.796 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M77.547,45.796 C88.779,45.796 97.884,54.915 97.884,66.163 C97.884,77.411 88.779,86.530 77.547,86.530 C66.315,86.530 57.210,77.411 57.210,66.163 C57.210,54.915 66.315,45.796 77.547,45.796 Z"/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M149.278,55.110 L95.722,55.110 "/>
+<path fill-rule="evenodd" stroke-width="3px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+ d="M149.278,76.968 L95.722,76.968 "/>
+
+</g>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; top:55px; left:74px;" class="ma-para-1-spinner">
+  <polygon fill="none" fill-rule="evenodd" stroke="#a656fb" stroke-width="2px" points="25,12.5 18.75,23.25 6.25,23.25 0,12.5 6.25,1.75 18.75,1.75" stroke-linecap="round" stroke-linejoin="round"></polygon>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; top:55px; left:146px;" class="ma-para-1-spinner">
+  <polygon fill="none" fill-rule="evenodd" stroke="#609fff" stroke-width="2px" points="25,12.5 18.75,23.25 6.25,23.25 0,12.5 6.25,1.75 18.75,1.75" stroke-linecap="round" stroke-linejoin="round"></polygon>
+</svg>
+                      </div>
+                      <p class="ma-para-1">In the distant future, a museum was constructed, dedicated to a bygone era of human history. This museum had a single purpose. This purpose would be hidden, only accessible to those who were willing to discern its message.</p>
+                    </div>
+
+                    <p class="ma-para-2" data-text="Welcome to the Morning Artifice exhibit!">Welcome to the Morning Artifice exhibit!</p>
+
+                    <p></p>
+
+                    <p>No flash photography.</p>
+
+                    <p>Now, please scroll to the first exhibit.</p>
                   </div>
                 </div>
                 </div>
@@ -496,23 +566,6 @@ layout: blank_page
                   data-parallax-type="b" 
                   data-parallax-speed="-0.4" 
                   data-parallax-offset="50%">
-                <div class="homeContentSpacing homeContentCuratorIntro scrollCheck fadeInCodeParas">
-                  <p>c@neutral <span class="color-primaryAccent">~ >></span> IT is I the magnificent curator!</p>
-                  <div class="swapImageContainer">
-                    <img src='/assets/images/cast/curator-beautiful.png' class="swapImage"/>
-                    <img src='/assets/images/cast/curator-beautiful-darq.png' class="swapTarget"/>
-                  </div>
-                  <p>i am here to absolve you of your confusion.</p>
-                </div>
-
-                <div class="homeContentSpacing homeContentWelcome scrollCheck fadeInCodeParas">
-                  <p>Welcome to Morning Artifice - a world defined by the technology of today’s future.</p>
-                  <p>This world was <span class="color-primaryAccent">magnificent</span>, yet dark.</p>
-                  <p>It tested everything it meant to be <span class="color-primaryAccent">human</span>.</p>
-                  <p>&nbsp;</p>
-                  <p>No flash photography.</p>
-                  <p>Now, please scroll to the FIRST exhibit.</p>
-                </div>
 
                 <div class="homeContentSpacing homeContentScroll">
                   <svg 

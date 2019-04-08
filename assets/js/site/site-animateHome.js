@@ -1,5 +1,69 @@
 $(document).ready( function() {
 
+  // SCROLLDOWN ICON ANIMATION
+  // Changes the colors of the little scroll down icons on the home page.
+  var $iconHolder = $(".ma-scroll-down");
+  $iconHolder.each(function() {
+    var animationStepTime = 100;
+
+    var $this = $(this);
+
+    var $icon1 = $this.find(".ma-scroll-down-1");
+    var $icon2 = $this.find(".ma-scroll-down-2");
+    var $icon3 = $this.find(".ma-scroll-down-3");
+    var $icon4 = $this.find(".ma-scroll-down-4");
+
+    function cycleAnimation1() {
+      $icon1.css("background-color","#f0f");
+      $icon4.css("background-color","#f0f");
+
+      $icon2.css("background-color","#0ff");
+      $icon3.css("background-color","#0ff");
+
+      setTimeout(function() {
+        cycleAnimation2();
+      }, animationStepTime);
+    }
+
+    function cycleAnimation2() {
+      $icon1.css("background-color","#0ff");
+      $icon4.css("background-color","#0ff");
+
+      $icon2.css("background-color","#fff");
+      $icon3.css("background-color","#fff");
+
+      setTimeout(function() {
+        cycleAnimation3();
+      }, animationStepTime);
+    }
+
+    function cycleAnimation3() {
+      $icon1.css("background-color","#fff");
+      $icon4.css("background-color","#fff");
+
+      $icon2.css("background-color","#fff");
+      $icon3.css("background-color","#fff");
+
+      setTimeout(function() {
+        cycleAnimation4();
+      }, animationStepTime*5);
+    }
+
+    function cycleAnimation4() {
+      $icon1.css("background-color","#fff");
+      $icon4.css("background-color","#fff");
+
+      $icon2.css("background-color","#f0f");
+      $icon3.css("background-color","#f0f");
+
+      setTimeout(function() {
+        cycleAnimation1();
+      }, animationStepTime);
+    }
+
+    cycleAnimation1();
+  });
+
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     // Mobile code
   } else {
@@ -158,11 +222,6 @@ $(document).ready( function() {
   });
 
 });
-
-function randomizeEcho(element, phrases, multi = 3000) {
-  $(element).text(phrases[Math.floor(Math.random()*phrases.length)]);
-  setTimeout(function() { randomizeEcho( element, phrases, multi); }, Math.floor(Math.random() * multi));
-}
 
 function spinFloatRandomAnim(elClass) {
   $('.' + elClass).each(function () {
