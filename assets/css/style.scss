@@ -549,16 +549,16 @@ body {
 }
 
 .navHeadingItem {
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255,255,255,0);
+  border: 1px solid rgba(255,255,255,0.1);
 
   padding: 8px;
   padding-left: 20px;
   margin-bottom: 5px;
   transition: 0.1s ease-in-out;
-  border-left: 2px solid rgba(255,255,255,0.4);
-  border-right: 2px solid rgba(255,255,255,0.4);
+  
   border-radius: 6px;
-  cursor: hand;
+  cursor: pointer;
   user-select: none;
 
   display: flex;
@@ -570,9 +570,11 @@ body {
   }
 }
 .navHeadingItem:hover {
-  background-color: rgba(255,255,255,0.2);
-  border-left: 2px solid white;
-  border-right: 2px solid white;
+  background-color: rgba(0,0,0,0);
+  border-color: #f0f;
+  .navHeadingItemTitle, .navHeadingItemIcon {
+    color: #f0f;
+  }
 }
 .navHeadingItemTitle {
   padding-left: 50px;
@@ -3411,12 +3413,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   color: #ff00ff;
 }
 .headerTerminal:hover, .headerTerminal:active, .headerTerminal:focus {
-  color: #00ff36;
+  color: #00ff00;
 }
 .headerAbout:hover, .headerAbout:active, .headerAbout:focus {
   color: white;
 }
 
+.ma-para-3-terminal {
+  color: #00ff00;
+  text-decoration: none;
+  border-color: #00ff00;
+  border-bottom: 1px solid;
+  transition: 0s ease-in-out;
+  &:hover, &:active {
+    outline: 0;
+  }   
+  &:hover, &:active, &:focus {
+    border-bottom: 2px solid;
+    text-decoration: none;
+    color: #00ff00;
+    border-color: #00ff00;
+  }
+}
 
 .galleryBlockTitle {
   text-align: center;
