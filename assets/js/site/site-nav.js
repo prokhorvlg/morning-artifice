@@ -231,6 +231,7 @@ function closeNav() {
 function navClick(target) {
   $('.nav_sectionTitle').html(target);
   $('.nav_sectionDescription').html(window.navSections[target]['description']);
+  $(".nav_sectionDescriptionImage").hide();
 
   if (target == 'terminal') {
     $('.navScrollable').css('height', '0px');
@@ -238,6 +239,7 @@ function navClick(target) {
     $('.navScrollable').css('flex-grow', '0');
     $('.navScrollable').css('margin-top', '0px');
     $('.navTerminal').addClass('displayMe');
+    $(".nav_sectionDescriptionImage").show();
   } else {
     $('.navScrollable').css('height', 'auto');
     $('.navScrollable').css('flex-grow', '1');
@@ -245,6 +247,7 @@ function navClick(target) {
     $('.navTerminal').css('height', '150px');
     $('.navScrollable').css('margin-top', '30px');
     $('.navScrollable').html(window.generatedNavButtons[target]);
+    $(".nav_sectionDescriptionImage").hide();
     setTimeout( function() { 
       $('.navTerminal').removeClass('displayMe'); 
     }, 200);

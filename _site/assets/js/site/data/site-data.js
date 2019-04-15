@@ -121,7 +121,7 @@ window.navSections = {
     "color": "#ff00ff"
   },
   "terminal": {
-    "description": "An old Network Utility Terminal hooked directly into... something. Enter commands into the terminal and push enter to interact with it.",
+    "description": "A restored Network Utility Terminal hooked directly into... something. Input commands into the terminal and push ENTER to interact with it.",
     "color": "#00ff36"
   },
   "about": {

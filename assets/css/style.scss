@@ -483,8 +483,15 @@ body {
 }
 
 .navSectionDescriptionContainer {
-  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   text-align: left;
+  padding-bottom: 10px;
+  p {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 991px) {
   .navSectionDescriptionContainer {
@@ -1834,6 +1841,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   50%  { border-color: #0ff; }
   100% { border-color: #f0f; }
 }
+
+.ma-para-welcome-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+}
+
 .ma-para-2 {
   font-family: $font-title-2;
   font-size: 56px;
@@ -1856,7 +1872,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   z-index: 20;
   user-select: none;
 }
+@media (max-width: 991px) {
+  .ma-para-2 {
+    font-size: 28px;
+    padding-bottom: 0px;
+  }
+}
 
+.ma-para-3 {
+  width: 80%;
+  max-width: 1800px;
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .ma-para-3 {
+    width: 100%;
+  }
+}
 
 
 .noVisibility p {
@@ -3345,8 +3379,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   background: rgba(0,0,0,0.2);
 }
 @media (max-width: 991px) {
-  .curatorBlock h5 {
-    text-align: center;
+  .curatorBlock {
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
   }
 } 
 .curatorBlock p {
@@ -3755,12 +3791,8 @@ button.close:hover {
 /* -- Fonts & Typography                */
 /*  The typographical styles for headers, paragraphs, spans, and other texts. */
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $font-title-2;
-}
-
-h3, h4, h5, h6 {
-  font-family: $font-title;
 }
 
 body {
