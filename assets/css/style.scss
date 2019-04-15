@@ -1849,6 +1849,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   height: 100vh;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .ma-para-welcome-block {
+    height: auto;
+    .homeContentScroll {
+      padding-top: 30px;
+    }
+  }
+}
 
 .ma-para-2 {
   font-family: $font-title-2;
@@ -1874,7 +1882,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 }
 @media (max-width: 991px) {
   .ma-para-2 {
-    font-size: 28px;
+    font-size: 32px;
     padding-bottom: 0px;
   }
 }
