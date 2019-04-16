@@ -1,6 +1,6 @@
 ---
 title: "Kaizen"
-excerpt: "Kaizen are both software and hardware that make up the artificial intelligences of Unturned Stones, and are what make the world as it is possible."
+excerpt: "Kaizen were both software and hardware that made up artificial intelligences. They were what made the world of Morning Artifice as it was possible."
 author: "prokhorVLG"
 
 raw: kaizen
@@ -24,13 +24,13 @@ page_features: [
                     flavor: "",
                     flavor_url: '',
 
-                    description: "<p class='text-left'>Kaizen are both software and hardware that make up the artificial intelligences of Unturned Stones, and are what make the world as it is possible.</p>
+                    description: "<p class='text-left'>Kaizen were both software and hardware that made up artificial intelligences. They were what made the world of Morning Artifice as it was possible.</p>
 
-                    <p class='text-left'>Kaizen are not robots. The closest analogy (and grossest oversimplifaction) would portray them as computer programs which learn, improve on themselves, and expand by copying and decentralizing themselves across multiple devices - all towards and for the completion of a preprogrammed goal. Much like a gas, a kaizen would eventually expand to fill its digital vessel until it can be tracked across all of <a href='#' class='infoTag common' data-info='everyware' data-toggle='modal' data-target='#modalInfoTag'>everyware</a>.</p>
+                    <p class='text-left'>Kaizen were not robots. The closest analogy (and grossest oversimplifaction) would portray them as computer programs which learn, improve on themselves, and expand by copying and decentralizing themselves across multiple devices - all towards the completion of a preprogrammed goal. Much like a gas, a kaizen would eventually expand to fill its digital vessel until it can be tracked across all of <a href='#' class='infoTag common' data-info='everyware' data-toggle='modal' data-target='#modalInfoTag'>everyware</a>.</p>
 
-                    <p class='text-left'>In Unturned Stones, kaizen are a tool used by <a href='#' class='infoTag common' data-info='pravo' data-toggle='modal' data-target='#modalInfoTag'>governments</a> and organizations to deal with big data and influence systems with trillions of moving parts. Because these devices have the unprecedented ability to examine and manipulate fractally complex systems, actions that have never been possible became possible; such as surveilling everything and predicting the future.</p>
+                    <p class='text-left'>In Morning Artifice, kaizen were a tool used by <a href='#' class='infoTag common' data-info='pravo' data-toggle='modal' data-target='#modalInfoTag'>governments</a> and organizations to deal with big data and to influence systems with trillions of moving parts. Because these devices had the unprecedented ability to examine and manipulate fractally complex systems, actions that were never possible before became possible; such as surveilling everything and predicting the future.</p>
 
-                    <p class='text-left'>The term 'kaizen' is derived from the Japanese word used to describe the concept of 'continuous improvement'.</p>",
+                    <p class='text-left'>The term 'kaizen' was derived from the Japanese word used to describe the concept of 'continuous improvement'.</p>",
 
                     image: "/assets/images/codex/kaizen.png",
                     imageBlurb: "01101000 01101001",
@@ -60,7 +60,7 @@ page_features: [
                 {
                   type: 'headingBar', init: {
                     id: 'terminalObjectives',
-                    style: 'background-color: #222;',
+                    style: 'background-color: #22222260;',
                     class: 'paddingTopResponsive80',
                     noHR: true,
                     title: 'Terminal Objectives',
@@ -71,7 +71,7 @@ page_features: [
                 {
                   type: 'infoBlock', init: {
                     id: 'introductionText',
-                    style: 'background-color: #222;',
+                    style: 'background-color: #22222260;',
                     class: '',
                     width: '8',
                     data: "<p>Imagine an existence that is entirely defined by a single goal. This objective, programmed into you from birth, dictates every action and plan that you execute. Imagine not even experiencing the instinct of self-preservation - the only reason to preserve yourself might be a value calculation determining whether your destruction would make reality come closer to that objective model.</p>
@@ -86,13 +86,13 @@ page_features: [
 
 <p>Recursive goals are what led to the runaway kaizen that are the Kaizen Autarchs.</p>
 
-<p>Successful kaizen are human failures. <strong>Remember that.</strong></p>",
+<p>Successful kaizen were human failures.",
                   } 
                 },
                 {
                   type: 'infoBlock', init: {
                     id: 'introductionCuratorBlock',
-                    style: 'background-color: #222;',
+                    style: 'background-color: #22222260;',
                     class: 'paddingBottomResponsive80',
                     dualFloatBlock: true,
                     dualFloatBlockLeft: true,
@@ -128,7 +128,7 @@ page_features: [
                 {
                   type: 'headingBar', init: {
                     id: 'terminalValues',
-                    style: 'background-color: #222;',
+                    style: 'background-color: #22222260;',
                     class: 'paddingTopResponsive80',
                     noHR: true,
                     title: 'Modern Applications',
@@ -139,7 +139,7 @@ page_features: [
                 {
                   type: 'infoBlock', init: {
                     id: 'introductionText',
-                    style: 'background-color: #222;',
+                    style: 'background-color: #22222260;',
                     class: 'paddingBottomResponsive80',
                     width: '8',
                     data: "-",

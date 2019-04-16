@@ -81,6 +81,12 @@ $(document).ready(function(){
           randomizeEcho(this, ['GAME VER 5.2',
             'This application is currently in development.'], 800);
         }
+        else if (cmd[0] == 'REVOLUTION!') {
+          randomizeEcho(this, ['...or so they thought.',
+            'The citizens of the Empire would, hundreds of years later, recognize the cruel irony of their past before joining their fellows.',
+            'Maybe it was too late. But they would recognize it, and I believe that is what is important.',
+            'What do you think?'], 800);
+        }
         else if (cmd[0] == 'SAXX') {
           $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop" muted><source src="/assets/video/saxx.mp4" type="video/mp4"></source></video>').appendTo( "div" );
           $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop"><source src="/assets/video/saxx.mp4" type="video/mp4"></source></video>').appendTo( "body" );
