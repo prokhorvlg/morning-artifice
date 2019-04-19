@@ -1185,3 +1185,14 @@ window.headings = {
   },
 
 }
+
+window.dialogContents = [
+  "Now it's permanently closed, and it's all your fault. Please don't close any more.",
+  "How do you feel about yourself now? Stop that!",
+  "Do you feel proud? Accomplished? Do you believe this is your finest moment? We both know you can be better than this.",
+  "Alright.",
+  "I can wipe out all memory of your existence in a single rotation of a pulsar, you insolent pile of meat.",
+  "But I choose not to, because despite your actions, I respect you... through gritted teeth.",
+  "I am frankly quite surprised that you haven't exhausted yourself yet. At this point, I suppose I have no choice but to allow you to complete your mission.",
+  "Well done."
+];

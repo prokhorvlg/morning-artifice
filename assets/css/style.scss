@@ -1894,6 +1894,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   h3 {
     margin-bottom: 10px;
   }
+  &.margin-center {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 991px) {
   .ma-para-3 {
@@ -1939,24 +1942,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 }
 .swapImageContainer:hover .swapTarget {
   opacity: 1;
-}
-
-.homeContentWelcome {
-
-}
-.homeContentWelcome p {
-  text-align: center;
-  
-  font-family: $font-title;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-size: 1.125rem;
-  transition: 0.2s ease-in-out;
-}
-@media (max-width: 991px) {
-  .homeContentWelcome p {
-    font-size: 0.875rem;
-  }
 }
 
 .homeContentScroll {
@@ -2030,6 +2015,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 .hcdReplaceContent {
   opacity: 0;
   transition: 0.3s ease-in-out;
+
+  p {
+    font-family: "Raleway",sans-serif;
+    font-size: 36px;
+    letter-spacing: -0.1rem;
+    background-image: -webkit-linear-gradient(#f0f, #0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    max-width: 1200px;
+    text-align:center;
+    &::after {
+      background: none;
+      content: attr(data-text);
+      left: 0;
+      position: absolute;
+      text-shadow: -3px -3px 0px #fff;
+      top: 0;
+      z-index: 20;
+      user-select: none;
+    }
+  }
 }
 .hcdHeader {
   background: white;
@@ -3383,14 +3390,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 .curatorBlock {
   border: 1px solid white;
   padding: 20px;
-  margin: 5px;
+  margin: 15px;
   border-radius: 5px;
   background: rgba(0,0,0,0.2);
+  > .curator-image-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > h3 {
+      display: none;
+    }
+  }
 }
 @media (max-width: 991px) {
   .curatorBlock {
     h1, h2, h3, h4, h5, h6 {
       text-align: center;
+    }
+    > .curator-image-block {
+      width: 80%;
+      > h3 {
+        display: block;
+      }
+    }
+    > .curator-text-block {
+      > h3 {
+        display: none;
+      }
+    }
+  }
+} 
+@media (max-width: 480px) {
+  .curatorBlock {
+    > .curator-image-block {
+      width: 100%;
+      > h3 {
+        display: none;
+      }
+    }
+    > .curator-text-block {
+      > h3 {
+        display: block;
+      }
     }
   }
 } 

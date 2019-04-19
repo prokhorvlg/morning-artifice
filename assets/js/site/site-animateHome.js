@@ -167,12 +167,14 @@ $(document).ready( function() {
   
 
   // Handles click of little close button on the top right of home page 'dialogs'.
+  var hcdIconIterator = 0;
   $('.hcdIcon_interactive').click(function() {
     var $target = $('.' + $(this).data('hcd'));
     var $header = $target.find('.hcdHeader');
     var $body = $target.find('.hcdBody');
     var $replace = $target.find('.hcdReplace');
     var $replaceChild = $replace.find('.hcdReplaceContent');
+    var $replacePara = $replaceChild.find('p');
 
     var height = $body.height() + $header.height();
 
@@ -181,6 +183,12 @@ $(document).ready( function() {
 
     var timeStretch = 50;
     var scaleStretch = 50;
+
+    // Set paragraph contents to string.
+    $replacePara.text(window.dialogContents[hcdIconIterator]);
+    $replacePara.attr("data-text", window.dialogContents[hcdIconIterator]);
+    hcdIconIterator += 1;
+
     setTimeout(function() {
       $replace.css('display','flex');
       $replace.css('border','2px solid white');
@@ -213,6 +221,7 @@ $(document).ready( function() {
       $replace.css('border','none');
       $replace.css('margin', '0px');
       $replaceChild.css('opacity', '1');
+      $replace.css('width', "90%");
     }, (timeStretch * 5));
     
   }).on("keydown", function(event) {
