@@ -1378,6 +1378,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 .homeButtonText {
   padding-left: 20px;
   transition: 0.1s ease-in-out;
+
+  font-family: $font-title-2;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: 16px;
+  text-transform: capitalize;
 }
 @media (max-width: 600px) {
   .featured .homeButtonText {
@@ -1493,6 +1499,140 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
 .homeUpdateArrow:hover polygon {
   fill: black;
 }
+
+// Link block CSS
+
+// Row container for link blocks
+div.link-block-row {
+  width: 100%;
+  max-width: 1800px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+// Link block styling
+div.link-block-total-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  p.link-block-total-tag {
+    font-family: $font-code;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+  a.link-block {
+      padding: 4px;
+  margin: 10px;
+  cursor: hand;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(0,0,0,0.1);
+  background-clip: content-box;
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.1s ease-in-out;
+  user-select: none;
+
+  position: relative;
+  border-radius: 5px;
+
+
+&::after {
+  content: "";
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  transition: 0.3s ease-in-out;
+  //background-image: linear-gradient(to top, rgba(187, 0, 255, 0.02), rgba(255, 0, 255, 0.08));
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+&:hover::after {
+  opacity: 0.2;
+}
+
+&::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 20%;
+  bottom: 20%;
+  border: 1px solid rgba(255,0,255,0);
+  transition: 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+&:hover::before {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border: 1px solid rgba(255,0,255,1);
+}
+    
+    div.link-block-container {
+
+      div.link-block-inset {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        div.link-block-text {
+          padding-left: 20px;
+          transition: 0.1s ease-in-out;
+          p {
+            font-family: $font-title-2, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0;
+            font-size: 16px;
+            text-transform: capitalize;
+            margin: 0;
+          }
+        }
+        div.link-block-arrow {
+          flex-grow: 1;
+          text-align: right;
+          padding-right: 10px;
+          svg {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+// Link block custom styles
+div.link-block-total-container {
+  // Chronicle block
+  &.link-block-chronicle {
+    .link-block-color {
+      color: #0ff;
+    }
+    .link-block {
+      border-color: #0ff;
+      color: #0ff;
+      svg {
+        fill: #0ff;
+      }
+    }
+  }
+}
+
+
+
 
 .featuredHidden {
   position: absolute;
