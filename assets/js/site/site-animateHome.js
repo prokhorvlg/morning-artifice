@@ -64,6 +64,42 @@ $(document).ready( function() {
     cycleAnimation1();
   });
 
+
+  // QUOTESHUFFLE ANIMATIONS (streaming lines of code inside given div)
+    
+  // LEFT quoteshuffle (reads through pre-existing variable)
+  // Given the proper div class, this will automatically fill that div with the animation.
+  var $quoteshuffle = $(".quoteshuffle");
+
+  $quoteshuffle.each(function() {
+    // First, create an absolutely positioned div to contain the code itself, inside the given container.
+    var codeDiv = $('<div class="quoteshuffleTarget" style="position: absolute; user-select: none; left: 0; right: 0; top: 0; opacity: 0.2;"></div>');
+    $(this).append(codeDiv);
+
+    // Second, make sure this div has the relative positioning attribute to properly position the code div.
+    $(this).css("position", "relative");
+    $(this).css("overflow", "hidden");
+
+    // Then, initiate quoteShuffle on this div. 
+    quoteShuffle($(this).find(".quoteshuffleTarget"), $(this), window.codelines);
+  });
+
+  // quoteShuffle($spinBootupShuffle.first(), $spinContainer, window.codelines);
+  // Generate set of random 'machine learning' data for RIGHT quoteshuffle
+  /* var generatedCodelines = [];
+  for (var i = 0; i < 100; i++) {
+    var randomNumberOfLines = Math.floor(Math.random() * 6);
+    var randomLogLine = "";
+    for (var y = 0; y < randomNumberOfLines; y++) {
+      randomLogLine = randomLogLine.concat(Math.random().toString(36).substring(3) + ";0 ");
+    }
+    if (randomLogLine !== "") {
+      generatedCodelines.push(randomLogLine);
+    } else {
+      generatedCodelines.push("&nbsp;");
+    }
+  }*/
+
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     // Mobile code
   } else {
@@ -71,23 +107,23 @@ $(document).ready( function() {
 
     // SPINFLOAT ANIMATIONS (square selectors appearing inside banner at top of home page)
     // Activate random timing, sizing, location
-    spinFloatRandomAnim('spin-float-1');
-    spinFloatRandomAnim('spin-float-2');
+    /*spinFloatRandomAnim('spin-float-1');
+    spinFloatRandomAnim('spin-float-2');*/
 
     // SPINBANNER ANIMATIONS (giant spinning elements at top of home page)
     // Clockwise spinner
-    TweenMax.to('.spinRightBig', 200, {rotation:"360", ease:Linear.easeNone, repeat:-1, transformOrigin:'50% 50%'}, {timeScale:0}
+    /*TweenMax.to('.spinRightBig', 200, {rotation:"360", ease:Linear.easeNone, repeat:-1, transformOrigin:'50% 50%'}, {timeScale:0}
     );
     // Counterclockwise spinner
     TweenMax.to('.spinLeftBig', 200, {rotation:"-360", ease:Linear.easeNone, repeat:-1, transformOrigin:'50% 50%'}, {timeScale:0}
-    );
+    );*/
 
     // SPINTEXT ANIMATIONS (randomized quotes appearing around square inside banner at top of home page)
     // Activate random text
-    var $spinText = $('.spinText');
+    /*var $spinText = $('.spinText');
     $spinText.each(function() {
       randomizeEcho(this, window.phrases);
-    });
+    });*/
 
     // STREAKER ANIMATIONS (small spaceships moving horizontally across screen in body)
     // Activate streaker image-swap animations
@@ -304,7 +340,26 @@ function hcdCodelinePara(o, multi = 300){
 }
 
 // Handles the animation for the LEFT codelines quoteshuffle element.
-function quoteShuffle(spinBootupShuffle, spinContainer, codelines, numberOfLines = 0, lineNumber = 0) {
+function quoteShuffle(codeContainer, container, codelines, numberOfLines = 0, lineNumber = 0) {
+  if ($(codeContainer).outerHeight() > $(container).outerHeight() + 10) {
+    $(codeContainer).find('div').first().remove();
+  } else {
+    numberOfLines++;
+  }
+
+  if (lineNumber >= window.codelines.length){
+    lineNumber = 0;
+  }
+
+  $(codeContainer).append('<div style="pointer-events: none; overflow-anchor: none; user-select:none;">' + window.codelines[lineNumber++] + '</div>');
+
+  setTimeout(function() { 
+    quoteShuffle($(codeContainer), $(container), codelines, numberOfLines, lineNumber); 
+  }, Math.floor(Math.random() * 300));
+}
+
+// Handles the animation for the LEFT codelines quoteshuffle element.
+/*function quoteShuffle(spinBootupShuffle, spinContainer, codelines, numberOfLines = 0, lineNumber = 0) {
   if ($(spinBootupShuffle).outerHeight() > $(spinContainer).outerHeight() + 10) {
     $(spinBootupShuffle).find('div').first().remove();
   } else {
@@ -320,7 +375,7 @@ function quoteShuffle(spinBootupShuffle, spinContainer, codelines, numberOfLines
   setTimeout(function() { 
     quoteShuffle($(spinBootupShuffle), $(spinContainer), codelines, numberOfLines, lineNumber); 
   }, Math.floor(Math.random() * 300));
-}
+}*/
 
 // Handles the animation for the RIGHT codelines quoteshuffle element.
 function quoteShuffleSecond(spinBootupShuffle, spinContainer, codelines, numberOfLines = 0, lineNumber = 0) {
