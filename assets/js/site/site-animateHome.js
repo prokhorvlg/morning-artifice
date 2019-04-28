@@ -1,3 +1,9 @@
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+} 
+
 $(document).ready( function() {
 
   // SCROLLDOWN ICON ANIMATION
@@ -67,22 +73,73 @@ $(document).ready( function() {
 
   // QUOTESHUFFLE ANIMATIONS (streaming lines of code inside given div)
     
-  // LEFT quoteshuffle (reads through pre-existing variable)
+  // Quoteshuffle (reads through pre-existing variable)
   // Given the proper div class, this will automatically fill that div with the animation.
   var $quoteshuffle = $(".quoteshuffle");
 
   $quoteshuffle.each(function() {
     // First, create an absolutely positioned div to contain the code itself, inside the given container.
-    var codeDiv = $('<div class="quoteshuffleTarget" style="position: absolute; user-select: none; left: 0; right: 0; top: 0; opacity: 0.2;"></div>');
+    var $codeDiv = $('<div class="quoteshuffleTarget" style="position: absolute; user-select: none; left: 0; right: 0; top: 0; opacity: 0.2;"></div>');
+    if ($(this).hasClass("quoteBright")) {
+      $codeDiv.css("opacity", "0.3");
+    }
+    $(this).append($codeDiv);
+
+    // Second, make sure this div has the relative positioning attribute to properly position the code div.
+    $(this).css("position", "relative");
+    $(this).css("overflow", "hidden");
+
+    // Then, initiate quoteShuffle on this div.
+    quoteShuffle($(this).find(".quoteshuffleTarget"), $(this), window.codelines);
+  });
+
+  // Quote bubbles: generates randomly positioned circles inside the div, animated to grow and shrink one after the other.
+  var $quotebubbles = $(".quotebubbles");
+
+  $quotebubbles.each(function() {
+    // First, create an absolutely positioned div to contain the code itself, inside the given container.
+    var codeDiv = $('<div class="quotebubblesTarget" style="position: absolute; user-select: none; left: 0; right: 0; top: 0; opacity: 0.2;"></div>');
     $(this).append(codeDiv);
 
     // Second, make sure this div has the relative positioning attribute to properly position the code div.
     $(this).css("position", "relative");
     $(this).css("overflow", "hidden");
 
+    var $quotebubblesTarget = $(this).find(".quotebubblesTarget");
+
+    // Generate some randomly positioned circle bubble divs inside this container.
+
+    function appendRandomBubble(isFirst = false) {
+      var height = getRandomInt(60, 300);
+      var width = height;
+
+      var xPos = getRandomInt(0, $quotebubblesTarget.parent().outerWidth()) - 100;
+      var yPos = getRandomInt(0, $quotebubblesTarget.parent().outerHeight()) - 100;
+
+      var $randomBubble = $('<div class="quoteBubble" style="position: absolute; user-select: none; border-width: 2px; border-radius: 50%; border-style: solid;"></div>');
+      $randomBubble.css("left", xPos + "px");
+      $randomBubble.css("top", yPos + "px");
+
+      $randomBubble.css("height", height + "px");
+      $randomBubble.css("width", width + "px");
+
+      if (isFirst) {
+        $randomBubble.addClass("activeBubble");
+      }
+
+      $quotebubblesTarget.append($randomBubble);
+    }
+
+    appendRandomBubble(true);
+    for (var i = 0; i < 5; i++) {
+      appendRandomBubble();
+    }
+
     // Then, initiate quoteShuffle on this div. 
-    quoteShuffle($(this).find(".quoteshuffleTarget"), $(this), window.codelines);
+    quoteBubbles($quotebubblesTarget, $(this));
   });
+
+  
 
   // quoteShuffle($spinBootupShuffle.first(), $spinContainer, window.codelines);
   // Generate set of random 'machine learning' data for RIGHT quoteshuffle
@@ -356,6 +413,28 @@ function quoteShuffle(codeContainer, container, codelines, numberOfLines = 0, li
   setTimeout(function() { 
     quoteShuffle($(codeContainer), $(container), codelines, numberOfLines, lineNumber); 
   }, Math.floor(Math.random() * 300));
+}
+
+function quoteBubbles(bubbleContainer, container, interval = 3000) {
+  // First, find the first bubble with the activeBubble class. Find the next bubble, remove the class from all bubbles, and finally add the active class to the next bubble.
+
+  var $activeBubble = $(bubbleContainer).find(".activeBubble");
+
+  var $nextBubble;
+  if ($activeBubble.next().length != 0) {
+    $nextBubble = $activeBubble.next();
+  } else {
+    $nextBubble = $(bubbleContainer).children().first();
+  }
+
+  $(bubbleContainer).children().removeClass("activeBubble");
+  $(bubbleContainer).children().css("transform", "scale(1)");
+  $nextBubble.addClass("activeBubble");
+  $nextBubble.css("transform", "scale(1.2)");
+
+  setTimeout(function() { 
+    quoteBubbles($(bubbleContainer), $(container), interval); 
+  }, Math.floor(Math.random() * interval));
 }
 
 // Handles the animation for the LEFT codelines quoteshuffle element.

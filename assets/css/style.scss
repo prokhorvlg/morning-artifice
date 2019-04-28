@@ -1556,6 +1556,10 @@ div.link-block-total-container {
     position: relative;
     border-radius: 5px;
 
+    .quoteBubble {
+      transition: 1s ease-in-out;
+    }
+
     &::after {
       content: "";
       left: 0%;
@@ -1641,6 +1645,9 @@ div.link-block-total-container {
     svg polygon {
       fill: $link-block-color;
     }
+  }
+  .quoteBubble {
+    border-color: $link-block-color;
   }
 }
 
