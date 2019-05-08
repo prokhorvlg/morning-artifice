@@ -4419,3 +4419,7 @@ a.roll:active, a.roll:focus {
   -webkit-transform: none !important;
   transform: none !important;
 }
+
+img {
+  min-height: 10px;
+}
