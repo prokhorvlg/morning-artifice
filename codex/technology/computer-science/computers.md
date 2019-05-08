@@ -27,11 +27,13 @@ page_features: [
                     flavor: "",
                     flavor_url: '',
 
-                    description: "<p class='text-left'>These are the <a href='#' class='infoTag common' data-info='computers-uts' data-toggle='modal' data-target='#modalInfoTag'>computer paradigms of Unturned Stones</a>. It’s hard to say that it’s the most important aspect of the world - since everything is interlinked through and though - but if there was one thing one could point to that has somehow impacted everything, it would be these innocent electronic devices.</p>
+                    description: "<p class='text-left'>“Think? Why think! We have computers to do that for us.” - Isaac Asimov</p>
 
-<p class='text-left'>While each nation’s computers operate in their own, very unique ways, that isn’t the biggest factor in the modern political landscape. It’s simply the fact that they are different. Different enough to have hampered trade and communication when these societies first came in contact. Different enough that these societies, despite being fully human, were effectively alien to each other as their digital devices could not communicate.</p>
+<p class='text-left'>It was the most impressive tool man had ever dreamed of. Not because it could perform a great many functions, no, it was because it could perform all of them. The computer could take on many forms, whether weak, strong, small, large; one thing remains constant - the computer is the gateway to limitless possibility.</p>
 
-<p class='text-left'>Of course, that has all changed over time. With the right set of skills and resources, any device could communicate with any other; but that all came far too late to change the world. With the four <a href='#' class='infoTag common' data-info='pravo' data-toggle='modal' data-target='#modalInfoTag'>pravo powers</a> pitted against each other in the world-spanning <a href='#' class='infoTag common' data-info='attrition' data-toggle='modal' data-target='#modalInfoTag'>Attrition</a>, none of them would willingly adapt in a way that would allow the others to take advantage of them. The people of Unturned Stones are doomed to live in a world where international relationships can hardly take root, as each society grows further and further apart from the others despite being physically closer than ever with the advent of <a href='#' class='infoTag common' data-info='slipstream' data-toggle='modal' data-target='#modalInfoTag'>faster than light travel</a>.</p>",
+<p class='text-left'>Little did mankind know that when they would escape to the stars following the <a href='#' class='infoTag common' data-info='millenium-collapse' data-toggle='modal' data-target='#modalInfoTag'>Millenium Collapse</a>, the computer would be their eventual salvation. Despite man’s best efforts to resist the allure of the computer after its betrayal, the reign of the computer would eventually return.</p>
+
+<p class='text-left'>These were the computers of Morning Artifice. What appears to be a mere hunk of machined plastic and silicon conceals an idea which would eventually permeate every home, every room, every thing, until finally it would be realized during the ascension of man, and our creation.</p>",
 
                     image: "/assets/images/codex/computers.png",
                     imageBlurb: "Computers. Importantish.",

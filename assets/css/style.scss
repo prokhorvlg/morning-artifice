@@ -507,16 +507,13 @@ body {
   width: 100%;
   user-select: none;
   cursor: hand;
-  background-color: rgba(255,255,255,0.05);
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
   border-radius: 6px;
 
   transition: 0.1s ease-in-out;
-  border-left: 2px solid rgba(255,255,255,0.4);
-  border-right: 2px solid rgba(255,255,255,0.4);
-
+  border: 1px solid rgba(255,255,255,0.1);
 }
 @media (max-width: 991px) {
   .navBackButton {
@@ -526,9 +523,7 @@ body {
   }
 }
 .navBackButton:hover {
-  background-color: rgba(255,255,255,0.2);
-  border-left: 2px solid white;
-  border-right: 2px solid white;
+  border: 1px solid #f0f;
 }
 .navBackButton p {
   margin: 0px;
@@ -587,6 +582,7 @@ body {
   }
 }
 .navHeadingItemDescription {
+  display: none;
   padding-left: 20px;
   font-family: $font-code;
   text-transform: uppercase;
@@ -719,11 +715,14 @@ body {
     display: none;
   }
 }
+.command {
+  opacity: 0.5;
+}
 .displayMe {
   display: block !important;
 }
 .navTerminalChild {
-  padding-right: 20px;
+  padding-right: 5px;
   padding-bottom: 5px;
   margin-bottom: 5px;
   overflow-y: scroll;

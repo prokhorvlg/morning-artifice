@@ -81,6 +81,37 @@ $(document).ready(function(){
           randomizeEcho(this, ['GAME VER 5.2',
             'This application is currently in development.'], 800);
         }
+        else if (cmd[0] == 'MINKE') {
+          randomizeEcho(this, ['[[b;#0f0;]ENTRY FOUND...]',
+            '> Shortly after falling into disrepair, the Minke seemed to grow a mind of its own.',
+            '> Perhaps it was a rogue program escaping the data vaults, or the spirits themselves came to posess the craft.',
+            '> It would eventually leave without a crew, leaving just one cryptic message for people to find:',
+            '> [[b;#3498DB;]"TOO DA LOO"]'], 800);
+        }
+        else if (cmd[0] == 'VELVET' || cmd[0] == 'CURATOR') {
+          randomizeEcho(this, ['> [[b;#ff0000;]Stop] trying to look that up.',
+            '> You won\'t find anything about the Curator here.'], 800);
+        }
+        else if (cmd[0] == 'MORNING' || cmd[0] == 'ARTIFICE' || cmd[0] == 'MUSEUM') {
+          randomizeEcho(this, ['[[b;#0f0;]LOCATION FOUND...]',
+            '> INFORMATION: this cyberspace construct is currently registered to CIH Corporation. Please contact [[b;#AF7AC5;]AEI-566] for more information.'], 800);
+        }
+
+        else if (cmd[0] == 'STARSHIP' || cmd[0] == 'SPACESHIP') {
+          randomizeEcho(this, ['[[b;#3498DB;]Do you mean "starscraper"?]'], 800);
+        }
+
+        else if (cmd[0] == 'FEATURED' || cmd[1] == 'UPDATE') {
+          randomizeEcho(this, ['[[b;#0f0;]ENTRY FOUND...]', 
+            '> Yeah. It\'s a button. Nothing special.'], 800);
+        }
+
+        else if (cmd[0] == 'MESSAGE' || cmd[0] == 'HIDDEN' || cmd[0] == 'DISCERN' || cmd[0] == 'PURPOSE') {
+          randomizeEcho(this, ['[[b;#0f0;]ENTRY FOUND...]', 
+            '> It won\'t be quite that simple, but I commend your efforts.',
+            '> Try looking for certain key phrases on the [[b;#0ff;]everyware] page...'], 800);
+        }
+
         else if (cmd[0] == 'REVOLUTION!') {
           randomizeEcho(this, ['...or so they thought.',
             'The citizens of the Empire would, hundreds of years later, recognize the cruel irony of their past before joining their fellows.',
@@ -88,12 +119,16 @@ $(document).ready(function(){
             'What do you think?'], 800);
         }
         else if (cmd[0] == 'SAXX') {
-          $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop" muted><source src="/assets/video/saxx.mp4" type="video/mp4"></source></video>').appendTo( "div" );
           $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop"><source src="/assets/video/saxx.mp4" type="video/mp4"></source></video>').appendTo( "body" );
+          $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop" muted><source src="/assets/video/saxx.mp4" type="video/mp4"></source></video>').appendTo( "div" );
+          
         }
         else if (cmd[0] == 'HOWARD') {
-          $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop" muted><source src="/assets/video/howard.mp4" type="video/mp4"></source></video>').appendTo( "div" );
           $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop"><source src="/assets/video/howard.mp4" type="video/mp4"></source></video>').appendTo( "body" );
+          $('<video preload="preload" class="cheekyVideo" autoplay="autoplay" loop="loop" muted><source src="/assets/video/howard.mp4" type="video/mp4"></source></video>').appendTo( "div" );
+          
+        } else {
+          randomizeEcho(this, ['[[b;#f00;]> INVALID COMMAND <]'], 800);
         }
 
       }
