@@ -16,6 +16,8 @@ window.pageType = '';
 
 $(document).ready(function(){
 
+  loadFeaturedHome();
+
   // Find and store 
   $body = $('body');
   pageType = $body.attr('class');
@@ -553,32 +555,34 @@ function expandSitemapObject(currentHeading) {
 
 // Load Featured content when required.
 function loadFeaturedHome() {
-  var $hiddenEl = $('.featuredHidden').first();
-  var $targetEl = $('.homeButton.featured .homeButtomRightBracket').first();
+  if ($('.homeContent').length > 0) {
+    var $hiddenEl = $('.featuredHidden').first();
+    var $targetEl = $('.homeButton.featured .homeButtomRightBracket').first();
 
-  $lastEl = $hiddenEl.children('div').last();
+    $lastEl = $hiddenEl.children('div').last();
 
-  var id = $lastEl.attr('id');
-  var page_highlight = $lastEl.children('.page_highlight').text();
-  var title = $lastEl.children('.title').text();
-  var image = $lastEl.children('.image').text();
-  var quote = window.headings[id].description;
+    var id = $lastEl.attr('id');
+    var page_highlight = $lastEl.children('.page_highlight').text();
+    var title = $lastEl.children('.title').text();
+    var image = $lastEl.children('.image').text();
+    var quote = window.headings[id].description;
 
-  var link = window.headings[id].link;
+    var link = window.headings[id].link;
 
-  $targetEl.children('.quote').first().children('p').first().html(quote);
-  $targetEl.children('.quote').first().children('p').first().css('color',page_highlight);
-  $targetEl.children('.line').css('background',page_highlight);
-  $targetEl.children('.title').first().children('p').first().html(title).css('color',page_highlight);
-  $targetEl.children('.image').first().children('img').first().attr("src",image);
+    $targetEl.children('.quote').first().children('p').first().html(quote);
+    $targetEl.children('.quote').first().children('p').first().css('color',page_highlight);
+    $targetEl.children('.line').css('background',page_highlight);
+    $targetEl.children('.title').first().children('p').first().html(title).css('color',page_highlight);
+    $targetEl.children('.image').first().children('img').first().attr("src",image);
 
-  $targetEl.css('opacity','1');
+    $targetEl.css('opacity','1');
 
-  var $targetButton = $('.homeButton.featured').first();
+    var $targetButton = $('.homeButton.featured').first();
 
-  $targetButton.css('border','1px solid ' + page_highlight);
-  $("#featuredFill", $('#featuredSVG')).attr('style', "fill:"+page_highlight);
-  $('.homeButton.featured .homeButtonText').css('color',page_highlight);
+    $targetButton.css('border','1px solid ' + page_highlight);
+    $("#featuredFill", $('#featuredSVG')).attr('style', "fill:"+page_highlight);
+    $('.homeButton.featured .homeButtonText').css('color',page_highlight);
 
-  $targetButton.parent().attr('href',link);
+    $targetButton.parent().attr('href',link);
+  }
 }

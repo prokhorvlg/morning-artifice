@@ -28,23 +28,20 @@ layout: blank_page
     <meta name="description" content="{{ page.excerpt }}">
     <meta name="og:image" content="{{ page.image }}" /> 
 
-    <!--     jQuery     -->
-    <!--     The jQuery library.     -->
-    <script src="{% link assets/js/jQuery/jquery-3.3.1.min.js %}"></script>
+    
 
     <!--     jQuery: Terminal     -->
     <!--    The plugin that operates the terminal component.     -->
-    <script src="{% link assets/js/jQuery-terminal/jquery.terminal.min.js %}"></script>
+    
     <link rel="stylesheet" href="{% link assets/css/jQuery-terminal/jquery.terminal.css %}">
 
     <!--    jQuery: Magnific Popup   -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
     <!--     Bootstrap Core     -->
     <!--     For setting up page layouts.     -->
     <link href="{% link assets/css/bootstrap/bootstrap.min.css %}" rel="stylesheet">
-    <script src="{% link assets/js/bootstrap/bootstrap.min.js %}"></script>
 
     <!--     Web Fonts     -->
     <!--     Adds the site fonts.     -->
@@ -62,10 +59,6 @@ layout: blank_page
     <!--     Normalize     -->
     <!--     Adds cross-browser consistency and fixes some bugs.     -->
     <link href="{% link assets/css/normalize/normalize.css %}" rel="stylesheet">
-
-    <!--<script src="{% link assets/js/greensock/TweenMax.min.js %}"></script>-->
-
-
 
   </head>
   <body class="codex" id="body">
@@ -351,7 +344,7 @@ layout: blank_page
 
             </div> <!-- end fullHomeContainer -->
 
-            <script src="{% link assets/js/site/site-animateHome.js %}"></script>
+            
 
             <div class="featuredHidden">
               {% for dataItem in item.init.list-of-updates %}
@@ -366,12 +359,6 @@ layout: blank_page
                 {% endfor %}
               {% endfor %}
             </div>
-
-            <script>
-              $(document).ready(function() {
-                loadFeaturedHome();
-              });
-            </script>
 
           {% elsif item.type == "homeFinalContent" %}
 
@@ -1476,9 +1463,22 @@ layout: blank_page
 
       {% include infoTagModal.html %}
 
-          <!--     Custom Data     -->
+    <!--     jQuery     -->
+    <!--     The jQuery library.     -->
+    <script src="{% link assets/js/jQuery/jquery-3.3.1.min.js %}"></script>
+
+    <script src="{% link assets/js/jQuery-terminal/jquery.terminal.min.js %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script src="{% link assets/js/bootstrap/bootstrap.min.js %}"></script>
+
+
+    <!--     Custom Data     -->
     <!-- Script: Loads data into global namespace variables  -->
     <script src="{% link assets/js/site/data/site-data.js %}"></script>
+
+    <script src="{% link assets/js/site/site-animateHome.js %}"></script>
 
     <!--     Custom Scripts     -->
     <!-- Script: Provides image source reference data -->
@@ -1495,6 +1495,8 @@ layout: blank_page
     <script src="{% link assets/js/site/site-infotag.js %}"></script>
     <!-- Script: Provides parallaxing functionality -->
     <script src="{% link assets/js/site/site-parallax.js %}"></script>
+
+    
 
       <script>
         $(document).ready(function() {
