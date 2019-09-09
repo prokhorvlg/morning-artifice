@@ -43,12 +43,18 @@ function parallax(el, type = "b", speed = 0.5, offset = "50%", objectType = "r")
   if (type === "b") {
     // Run actual parallax function whenever window is scrolled.
     $window.on('scroll resize', function() {
-      parallaxRunBackground($(el), speed, offset);
+      var $parallaxEl = $(el);
+      if ($parallaxEl.visible(true)) {
+        parallaxRunBackground($parallaxEl, speed, offset);
+      }
     });
     parallaxRunBackground($(el), speed, offset);
   } else if (type === "o") {
     $window.on('scroll resize', function() {
-      parallaxRunObject($(el), speed, objectType);
+      var $parallaxEl = $(el);
+      if ($parallaxEl.visible(true)) {
+        parallaxRunObject($parallaxEl, speed, objectType);
+      }
     });
     parallaxRunObject($(el), speed, objectType);
   }

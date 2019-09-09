@@ -1,0 +1,19 @@
+<div class="row paddingTopBottom {{ item.init.class }}" id="{{ item.init.id }}" style="{{ item.init.style }}">
+  <div class="col-md-0 col-lg-{% if item.init.width == "8" %}2{% elsif item.init.width == "10" %}1{% elsif item.init.width == "6" %}3{% endif %}"></div>
+  <div class="col-md-12 col-lg-{{ item.init.width }}">
+    <div class="infoBlockBody {% if item.init.dualFloatBlock %}dualFloatBlock{% endif %} {% if item.init.dualFloatBlockLeft %}dualFloatBlockLeft{% endif %} {% if item.init.centered %}center{% endif %} {% if item.init.curatorBlock %}curatorBlock{% endif %}">
+
+      {% if item.init.dualFloatBlockAdvanced %}
+      <div class="imageBlockChild">
+        <a class="image-popup-no-margins" href="{{ item.init.dualFloatBlockInit.image.full }}" target="_blank" style="text-decoration: none;"><img src="{{ item.init.dualFloatBlockInit.image.thumb }}" class="imageBlockImage {% if item.init.dualFloatBlockInit.image.circle %}circle{% endif %}"/></a>
+        <h3 class="{{ item.init.dualFloatBlockInit.image.title-alignment }}">{{ item.init.dualFloatBlockInit.image.title }}</h3>
+        <p class="statBlockContent imageBlockDesc">{{ item.init.dualFloatBlockInit.image.desc }}</p>
+      </div>
+      {% endif %}
+
+      {{ item.init.data }}
+
+    </div>
+  </div>
+  <div class="col-md-0 col-lg-{% if item.init.width == "8" %}2{% elsif item.init.width == "10" %}1{% elsif item.init.width == "6" %}3{% endif %}"></div>
+</div>

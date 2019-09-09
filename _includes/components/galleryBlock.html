@@ -1,0 +1,32 @@
+<div class="row galleryBlockTitle" id="{{ item.init.id }}">
+  <div class="col-md-12 col-lg-12">
+    <h1 class="bodyTitle colorMinke">{{ item.init.title }}</h1>
+    <p class="statBlockContent font-code" style="color: {{ page.page_highlight }};">{{ item.init.desc }}</p>
+    <hr class="sectionWidth" />
+  </div>
+</div>
+
+{% for dataRow in item.init.items %}
+
+<div class="row galleryRow">
+
+  {% for dataItem in dataRow %}
+  <div class="galleryItem galleryRow3">
+    <a class="image-popup-no-margins" href="{{ dataItem.full }}" target="_blank" style="text-decoration: none;">
+      <div class="galleryImageContainer">
+        <img src="{{ dataItem.thumb }}" />
+      </div>
+      <div class="galleryText">
+        <h5>{{ dataItem.title }}</h5>
+        <hr class="galleryHR">
+        <p><em>{{ dataItem.desc }}</em></p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endfor %}
+
+<div class="row paddingBottom"></div>

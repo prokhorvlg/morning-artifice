@@ -1379,7 +1379,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', end
   transition: 0.1s ease-in-out;
 
   font-family: $font-title-2;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 0;
   font-size: 16px;
   text-transform: capitalize;
@@ -1735,6 +1735,7 @@ div.quoteshuffle {
   text-transform: none;
   letter-spacing: 0rem;
   font-size: 1.4rem;
+  font-weight: 800;
 }
 .homeButtomRightBracket .image {
   margin-right: 40px;
@@ -2037,6 +2038,7 @@ div.quoteshuffle {
   font-family: $font-title-2;
   font-size: 56px;
   letter-spacing: -0.1rem;
+  font-weight: 800;
 
   background-image: -webkit-linear-gradient(#f0f, #0ff);
   -webkit-background-clip: text;
@@ -3217,6 +3219,7 @@ div.quoteshuffle {
   position: relative;
   font-size: 3rem;
   letter-spacing: -0.1rem;
+  font-weight: 800;
 }
 .codexTextContent h1::after {
   background: none;
@@ -4033,6 +4036,7 @@ button.close:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title-2;
+  font-weight: 800;
 }
 
 body {

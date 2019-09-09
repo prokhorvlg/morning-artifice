@@ -16,14 +16,13 @@ window.pageType = '';
 
 $(document).ready(function(){
 
+  // Load Featured Collection item.
   loadFeaturedHome();
 
-  // Find and store 
+  // Find and store it as a variable.
   $body = $('body');
   pageType = $body.attr('class');
 
-  // Generate the navbar from site data.
-  generateNav();
   // Automatically click the hub button to set the nav bar up.
   navClick('hub');
 
@@ -32,7 +31,7 @@ $(document).ready(function(){
   });
 
   var $processURL = $('#processURL');
-  if ($processURL.length){
+  if ($processURL.length) {
     var urlString = $processURL.html();
     var pageColor = $processURL.css('color');
     $processURL.html(processURL(urlString, pageColor, pageType));
@@ -40,9 +39,6 @@ $(document).ready(function(){
 
   // Apply page highlight to elements with appropriate class.
   pageHighlight();
-
-  // Load a sitemap into any element with a sitemap class.
-  sitemapInit('sitemap');
 
   $('.navTabCircle').click(function($e) {
     $e.preventDefault();
@@ -264,156 +260,6 @@ function navClick(target) {
   $('.nav_' + target).children().addClass('navHoveredImage');
 }
 
-// Overhead function for generating the entire contents of the nav.
-function generateNav() {
-  window.generatedNavButtons['hub'] = findNavItems('hub', window.headings);
-  window.generatedNavButtons['chronicle'] = findNavItems('chronicle', window.headings);
-  window.generatedNavButtons['codex'] = findNavItems('codex', window.headings);
-  window.generatedNavButtons['terminal'] = findNavItems('terminal', window.headings);
-  window.generatedNavButtons['about'] = findNavItems('about', window.headings);
-}
-
-// Triggers all of the overheads for nav generation.
-function findNavItems(target) {
-  var currentHeadingObject = '';
-
-  if (target == 'codex') {
-
-    compileObjectOverhead('geography', window.headings);
-    compileObjectOverhead('history', window.headings);
-    compileObjectOverhead('society', window.headings);
-    compileObjectOverhead('technology', window.headings);
-
-    currentHeadingObject += window.generatedNavButtons['geography'];
-    currentHeadingObject += window.generatedNavButtons['history'];
-    currentHeadingObject += window.generatedNavButtons['society'];
-    currentHeadingObject += window.generatedNavButtons['technology'];
-  }
-  return currentHeadingObject;
-}
-
-// Overhead function; takes care of all HTML generation for an inputted nav object.
-function compileObjectOverhead(currentHeading) {
-  // Begin by compiling the button for the object.
-  compileNavObjectButton(currentHeading);
-
-  // Cycle through object children (if any), and run this function on them.
-  for (var i = 0; i < window.headings[currentHeading]['subheadings'].length; i++) {
-    compileObjectOverhead(window.headings[currentHeading]['subheadings'][i]);
-  }
-
-  // Proceed to compile the slideout for the object if it has children. - NEEDS CHILDREN BUTTONS
-  if (window.headings[currentHeading]['actions'] === 'expand') {
-    compileNavObjectSlideout(currentHeading);
-  }
-  // The object is now created.  
-}
-
-// Compiles a button for the input object.
-function compileNavObjectButton(currentHeading) {
-  if (window.headings[currentHeading]['actions'] == 'expand') {
-
-    var currentHeadingObject = '';
-
-    currentHeadingObject += "<div class='navHeadingItem' id='" +window.headings[currentHeading]['title'] + "' onclick=\"openNavObject('" + currentHeading + "')\" >";
-
-    currentHeadingObject += "<div style='display: flex;'>";
-
-    currentHeadingObject += "<div class='navHeadingItemIcon'>";
-    currentHeadingObject += window.headings[currentHeading]['icon'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemTitle'>";
-    currentHeadingObject += window.headings[currentHeading]['title'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDescription'>";
-    currentHeadingObject += window.headings[currentHeading]['description'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDown nav_color' id=\"navHeadingItemDown_" + currentHeading + "\">";
-    currentHeadingObject += "+";
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    window.generatedNavButtons[currentHeading] = currentHeadingObject;
-  }
-  else if (window.headings[currentHeading]['actions'] == 'direct') {
-    var currentHeadingObject = '';
-
-    currentHeadingObject += "<a class='divLink' href='" + window.headings[currentHeading]['link'] + "'><div class='navHeadingItem' id='nav_" + currentHeading + "' >";
-
-    currentHeadingObject += "<div style='display: flex;'>";
-
-    currentHeadingObject += "<div class='navHeadingItemIcon'>";
-    currentHeadingObject += window.headings[currentHeading]['icon'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemTitle'>";
-    currentHeadingObject += window.headings[currentHeading]['title'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDescription'>";
-    currentHeadingObject += window.headings[currentHeading]['description'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDown nav_color'>";
-    currentHeadingObject += "⤷";
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div></a>";
-
-    window.generatedNavButtons[currentHeading] = currentHeadingObject;
-  }
-}
-
-function compileNavObjectSlideout(currentHeading) {
-
-  var buttonsInThisNav = '';
-  for (var i = 0; i < window.headings[currentHeading]['subheadings'].length; i++) {
-    buttonsInThisNav += window.generatedNavButtons[window.headings[currentHeading]['subheadings'][i]];
-  }
-
-  window.generatedNavPages[currentHeading] = "<div class='navElement' id='child_"+ currentHeading + "'>\
-      <div class='navBackButton' onclick='closeNavObject(\""+ currentHeading + "\")'>\
-        <p class='font-code nav_color'><< BACK</p>\
-      </div>\
-      <h2 class='navTitle'>"+ window.headings[currentHeading]['title'] + "</h2>\
-      <p class='navHeadingDetails'>" + window.headings[currentHeading]['details'] + "</p>\
-      <div class='navChild navScrollable utsScrollBar'>\
-        " + buttonsInThisNav + "\
-      </div>\
-    </div>";
-}
-
-function openNavObject(currentHeading) {
-  var navObject = window.generatedNavPages[currentHeading];
-  if (!$("#child_" + currentHeading).length) {
-    $('.appendNavElements').append( navObject );
-    
-    setTimeout( function() {
-      $('#child_' + currentHeading).css('left', '0');
-      $('.nav_color').css('color', window.navSections[window.activeSection]['color']);
-     }, 5);
-    
-  }
-}
-
-function closeNavObject(currentHeading) {
-  if ($("#child_" + currentHeading).length) {
-    $('#child_' + currentHeading).css('left', '-750px');
-
-    setTimeout( function() { 
-      $("#child_" + currentHeading).remove(); 
-    }, 300);
-  }
-}
-
 // Navigates to the selected page.
 function navigateNavObject(currentHeading) {
   window.location.href = window.headings[currentHeading]['link'];
@@ -446,111 +292,6 @@ function pageHighlight() {
   $('.highlight-color').css('color', color);
   $('.highlight-bg').css('background-color', color);
   $('.highlight-border').css('border-color', color);
-}
-
-window.sitemap = '';
-function sitemapInit(el) {
-  window.sitemap = window.sitemap + compileSitemap('hub', 0);
-  window.sitemap = window.sitemap + compileSitemap('codex', 0);
-  $('.' + el).html(window.sitemap);
-}
-
-function compileSitemap(currentHeading, currentLeft = 0) {
-
-  var calcLeft = currentLeft * 20;
-
-  if (window.headings[currentHeading]['actions'] == 'expand') {
-
-    var currentHeadingObject = '';
-
-    currentHeadingObject += "<div class='navHeadingItem' id='" + currentHeading + "' onclick=\"expandSitemapObject('" + currentHeading + "')\" style='margin-left: " + calcLeft + "px'>";
-
-    currentHeadingObject += "<div style='display: flex;'>";
-
-    currentHeadingObject += "<div class='navHeadingItemIcon'>";
-    currentHeadingObject += window.headings[currentHeading]['icon'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemTitle'>";
-    currentHeadingObject += window.headings[currentHeading]['title'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDescription'>";
-    currentHeadingObject += window.headings[currentHeading]['description'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDown nav_color' id=\"navHeadingItemDown_" + currentHeading + "\">";
-    currentHeadingObject += "+";
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    var compiledSubheadings = "<div class='navHeadingContainer' id='expand_" + currentHeading + "'>";
-    for (var i = 0; i < window.headings[currentHeading]['subheadings'].length; i++) {
-      compiledSubheadings += compileSitemap(window.headings[currentHeading]['subheadings'][i], (currentLeft + 1));
-    }
-    compiledSubheadings += "</div>";
-
-    return currentHeadingObject + compiledSubheadings;
-
-  }
-  else if (window.headings[currentHeading]['actions'] == 'direct') {
-    var currentHeadingObject = '';
-
-    currentHeadingObject += "<div class='navHeadingItem' id='nav_" + currentHeading + "' onclick=\"openNavObject('" + currentHeading + "')\" style='margin-left: " + calcLeft + "px'>";
-
-    currentHeadingObject += "<div style='display: flex;'>";
-
-    currentHeadingObject += "<div class='navHeadingItemIcon'>";
-    currentHeadingObject += window.headings[currentHeading]['icon'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemTitle'>";
-    currentHeadingObject += window.headings[currentHeading]['title'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDescription'>";
-    currentHeadingObject += window.headings[currentHeading]['description'];
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "<div class='navHeadingItemDown nav_color'>";
-    currentHeadingObject += "⤷";
-    currentHeadingObject += "</div>";
-
-    currentHeadingObject += "</div>";
-
-    return currentHeadingObject;
-  }
-
-}
-
-function expandSitemapObject(currentHeading) {
-  var child = document.getElementById('expand_' + currentHeading);
-  var child_details = document.getElementById('details_' + currentHeading);
-  if (document.getElementById('details_' + currentHeading)) {
-    child_details = document.getElementById('details_' + currentHeading);
-  }
-
-  if (child.style.height == '0px') {
-    child.style.height = "auto";
-    if (child_details) {
-      child_details.style.height = "auto";
-      child_details.style.display = "block";
-    }
-    $('#navHeadingItemDown_' + currentHeading).html('-');
-  }
-  else {
-    child.style.height = '0px';
-    if (child_details) {
-      child_details.style.height = "0px";
-      child_details.style.display = "none";
-    }
-    $('#navHeadingItemDown_' + currentHeading).html('+');
-  }
 }
 
 // Load Featured content when required.

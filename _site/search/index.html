@@ -19,9 +19,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Page variables -->
-    <title>Sitemap</title>
+    <title>Search</title>
     <meta name="author" content="prokhorVLG">
-    <meta name="description" content="You can get to any page from here.">
+    <meta name="description" content="Find any page on the website here.">
     <meta name="og:image" content="" /> 
 
     <!--     jQuery: Terminal     -->
@@ -57,7 +57,7 @@
   </head>
   <body class="codex" id="body" tabindex="-1">
 
-    <div class="pageHighlight" style="color: #ddd;"></div>
+    <div class="pageHighlight" style="color: #ff00ff;"></div>
     <div id="siteContainer" class="siteContainer color-primary-l">
 
       <!--     Contains the site, which is pushed when the nav is opened.     -->
@@ -89,68 +89,24 @@
           <!-- codexHead: Top component of codex pages. -->
           
 
-            <div class="" style="padding-top: 60px;"></div>
-
-          
-
-        
-
-          <!-- codexHead: Top component of codex pages. -->
-          
-
-            <div class="row  " id="heading" style="">
-  <div class="col-md-0 col-lg-2"></div>
-  <div class="col-md-0 col-lg-8">
-    
-    
-      <div class="headingBar">
-        
-        <p class="font-code-l infoBlockOvertitle" style="color: #ddd;"></p>
-        
-        <hr class="full">
-        <h2 class="bodyTitle">Sitemap</h2>
-        
-        
-        <p class="statBlockContent font-code" style="color: #ddd;">Every page on this website.</p>
-        
-        
-      </div>
-      
-  </div>
-  <div class="col-md-0 col-lg-2"></div>
+            <div id="search-container">
+<input type="text" id="search-input" placeholder="search...">
+<ul id="results-container"></ul>
 </div>
 
-          
+<script src="/assets/js/site-search/SimpleJekyllSearch.js"></script>
 
-        
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',
+  searchResultTemplate: '<div><a href="{url}"><h1>{title}</h1></a><span>{date}</span></div>',
+})
+</script>
 
-          <!-- codexHead: Top component of codex pages. -->
-          
-
-            <div class="" style="padding-top: 60px;"></div>
-
-          
-
-        
-
-          <!-- codexHead: Top component of codex pages. -->
-          
-
-            <div id="sitemap" class="row">
-              <div class="col-md-12 col-lg-2"></div>
-              <div class="col-md-12 col-lg-8 sitemap"></div>
-              <div class="col-md-12 col-lg-2"></div>
-            </div>
-
-          
-
-        
-
-          <!-- codexHead: Top component of codex pages. -->
-          
-
-            <div class="" style="padding-top: 60px;"></div>
-
+          <!-- collectionPageContent: Collection page content. -->
           
 
         

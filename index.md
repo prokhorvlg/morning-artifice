@@ -2,6 +2,8 @@
 title: "Morning Artifice"
 excerpt: "The wonderful world of cyberspace."
 author: "prokhorVLG"
+isSearchable: true
+search_description: "home"
 
 permalink: /
 layout: blank_page
@@ -10,7 +12,7 @@ page_highlight: "#ff00ff"
 
 page_features: [
                 {
-                  type: 'spinBanner', init: {
+                  type: 'homePageBanner', init: {
                     list-of-updates: [
                       "immortality-taboo",
                       "personal-transport",
@@ -23,7 +25,7 @@ page_features: [
                   }
                 },
                 {
-                  type: 'homeFinalContent', init: {
+                  type: 'homePageContent', init: {
                     id: 'homeFinalContent',
                   }
                 },

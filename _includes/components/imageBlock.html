@@ -1,0 +1,13 @@
+<div id="{{ item.init.id }}" class="imageBlock row {{ item.init.class }}">
+  <div class="col-md-12 col-lg-2"></div>
+  <div class="col-md-12 col-lg-8 imageBlockContainer">
+    {% for dataItem in item.init.items %}
+    <div class="imageBlockChild">
+      <a class="image-popup-no-margins" href="{{ dataItem.full }}" target="_blank" style="text-decoration: none;"><img src="{{ dataItem.thumb }}" class="imageBlockImage {% if item.init.circle %}circle{% endif %}  {% if item.init.rounded %}rounded{% endif %}"/></a>
+      <h3 class="{{ dataItem.title-alignment }} {{ dataItem.class }}" style="{{ dataItem.style }}">{{ dataItem.title }}</h3>
+      <p class="statBlockContent imageBlockDesc" style="{{ dataItem.desc-style }}">{{ dataItem.desc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-md-12 col-lg-2"></div>
+</div>

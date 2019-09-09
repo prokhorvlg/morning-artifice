@@ -1,0 +1,33 @@
+<div id="{{ item.init.id }}" class="row">
+  <div class="col-md-12 col-lg-1"></div>
+  <div class="col-md-12 col-lg-10 wikiHead">
+    <div class="wikiLeft">
+      <p class="font-code-l infoBlockOvertitle" style="color: {{ page.page_highlight }};">{{ item.init.overtitle }}</p>
+      <hr class="full">
+      <h1 class="bodyTitle colorMinke">{{ item.init.title }}</h1>
+      <h2><a href="javascript:void(0);" onclick="scrollToElement('{{ item.init.flavor_url }}')" style="color: {{ page.page_highlight }};" class="font-code">{{ item.init.flavor }}</a></h2>
+      {{ item.init.description }}
+      <p id="processURL" class="codexTextProcess font-code" style="color: {{ page.page_highlight }};">{{ page.url }}</p>
+      <div class="wikiTOC">
+        <ul>
+          {% for dataItem in item.init.toc %}
+          <li><a href="javascript:void(0);" onclick="scrollToElement('{{ dataItem.url }}')" style="color: {{ page.page_highlight }};" class="wikiTOCLink font-code-l">{{ dataItem.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="codexImageBlock">
+        <div class="codexImageContent">
+          <div class="codexLeftBar" style="border-color: {{ page.page_highlight }}"></div>
+          <div class="codexImage"><img src="{{ item.init.image }}" /></div>
+          <div class="codexRightBar" style="border-color: {{ page.page_highlight }}"></div>
+        </div>
+        <div class="codexImageUnderblurb font-code">
+          {{ item.init.imageBlurb }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-lg-1"></div>
+</div>

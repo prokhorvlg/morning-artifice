@@ -2,7 +2,7 @@
 
 // Class name for any terminal object
 var terminalClassName = 'navTerminalChild';
-
+/*
 $(document).ready(function(){
   function updateTerminal(update) {
     $('.navTerminalChild').terminal().echo(update);
@@ -146,4 +146,4 @@ $(document).ready(function(){
     });
   });
   
-});
+});*/

@@ -1191,8 +1191,8 @@ window.dialogContents = [
   "How do you feel about yourself now? Stop that!",
   "Do you feel proud? Accomplished? Do you believe this is your finest moment? We both know you can be better than this.",
   "Alright.",
-  "I can wipe out all memory of your existence in a single rotation of a pulsar, you insolent pile of meat.",
-  "But I choose not to, because despite your actions, I respect you... through gritted teeth.",
-  "I am frankly quite surprised that you haven't exhausted yourself yet. At this point, I suppose I have no choice but to allow you to complete your mission.",
+  "If you stop now, I will spare you...",
+  "Okay, I lied. I wasn't planning on doing anything to you. But please, I've worked on this for years.",
+  "I am frankly surprised that you haven't exhausted yourself yet. At this point, I suppose I have no choice but to allow you to complete your mission.",
   "Well done."
 ];

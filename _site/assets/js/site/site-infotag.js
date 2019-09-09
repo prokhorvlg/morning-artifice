@@ -29,7 +29,7 @@ $(document).ready( function() {
     var tags = {
       'covert-firearms': {
         name: 'Covert Firearms',
-        body: "<p class='text-left'>It shouldn't be surprising that covert firearms are those used by spies and operatives - valuing concealability and deception above all else. These are the sorts of weapons that induce heart attacks and disassamble into neat misdirecting components, or are built to be disguised as inconspicious or miniature objects.</p>",
+        body: "<p class='text-left'>It shouldn't be surprising that covert firearms were those used by spies and operatives - valuing concealability and deception above all else. These were the sorts of weapons that induced heart attacks and disassambled into neat misdirecting components, or were built to be disguised as inconspicious or miniature objects.</p>",
         color: '#3a8841',
         imageType: 'img',
         image: 'covert-firearms',
@@ -55,8 +55,8 @@ $(document).ready( function() {
       },
       'caravansarai': {
         name: 'Caravansarai',
-        body: "<p class='text-left'>A rare form of matter that enables faster-than-light travel.</p> \
-          <p class='text-left'>Sagar-Chang Type 1, widely referred to simply as 'exotic matter', runs the modern world. It's most well known for facilitating SLIP faster-than-light travel, but the incredible nature of the substance makes it useful in nearly any technological application.</p>",
+        body: "<p class='text-left'>A rare form of matter that enabled faster-than-light travel.</p> \
+          <p class='text-left'>Sagar-Chang Type 1, widely referred to simply as 'exotic matter', ran the world. It's most well known for facilitating SLIPSTREAM faster-than-light travel, but the incredible nature of the substance made it useful in nearly any technological application.</p>",
         imageType: 'svg',
         image: 'infoSVG',
         styles: [
@@ -69,7 +69,7 @@ $(document).ready( function() {
       },
       'computers-uts': {
         name: 'Computers',
-        body: "<p class='text-left'>These are the computer paradigms of Unturned Stones. It’s hard to say that it’s the most important aspect of the world - since everything is interlinked through and though - but if there was one thing one could point to that has somehow impacted everything, it would be these innocent electronic devices.</p>",
+        body: "<p class='text-left'>These were the computer paradigms of Unturned Stones. It’s hard to say that it’s the most important aspect of the world - since everything is interlinked through and though - but if there was one thing one could point to that has somehow impacted everything, it would be these innocent electronic devices.</p>",
         color: '#c165d8',
         imageType: 'source',
         image: '/assets/images/codex/computers.png',

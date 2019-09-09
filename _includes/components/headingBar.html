@@ -1,0 +1,30 @@
+<div class="row {% if item.init.center %}center{% endif %} {{ item.init.class }}" id="{{ item.init.id }}" style="{{ item.init.style }}">
+  <div class="col-md-0 col-lg-2"></div>
+  <div class="col-md-0 col-lg-8">
+    {% if item.init.decor_square %}
+    <div class="infoDecorSquare"></div>
+    {% endif %}
+    {% if item.init.img_left %}
+    <div class="headingBarLeft">
+      {{ item.init.img_left }}
+      {% endif %}
+      <div class="headingBar">
+        {% if item.init.overtitle %}
+        <p class="font-code-l infoBlockOvertitle" style="color: {{ page.page_highlight }};">{{ item.init.overtitle }}</p>
+        {% endif %}
+        {% if item.init.noHR %}{% else %}<hr class="full">{% endif %}
+        <h2 class="bodyTitle">{{ item.init.title }}</h2>
+        {% if item.init.desc %}
+        {% if item.init.desc_color %}
+        <p class="statBlockContent font-code" style="color: {{ item.init.desc_color }};">{{ item.init.desc }}</p>
+        {% else %}
+        <p class="statBlockContent font-code" style="color: {{ page.page_highlight }};">{{ item.init.desc }}</p>
+        {% endif %}
+        {% endif %}
+      </div>
+      {% if item.init.img_left %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="col-md-0 col-lg-2"></div>
+</div>

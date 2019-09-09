@@ -1,0 +1,39 @@
+<div class="codexHead">
+  <div class="codexUpper">
+    <div class="codexTextBlock {% if item.init.no_toc == true %}codexTextBlockNoTOC{% endif %}">
+      {% if item.init.no_toc != true %}
+      <div class="codexTOC">
+        <ul>
+          {% for dataItem in item.init.toc %}
+          <li><a href="javascript:void(0);" onclick="scrollToElement('{{ dataItem.url }}')" style="color: {{ page.page_highlight }};" class="codexTOCLink font-code-l">{{ dataItem.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="codexTextContent {% if item.init.no_toc == true %}codexTextContentNoTOC{% endif %}">
+        <h1 data-text="{{ item.init.title }}" style="background-image: -webkit-linear-gradient({{ page.page_highlight }}, {% if item.init.page_highlight_2 %} {{ page.page_highlight_2 }} {% else %} {{ page.page_highlight }} {% endif %});">{{ item.init.title }}</h1>
+        <h2><a href="javascript:void(0);" onclick="scrollToElement('{{ item.init.flavor_url }}')" style="color: {{ page.page_highlight }};" class="font-code">{{ item.init.flavor }}</a></h2>
+        {{ item.init.description }}
+        <p id="processURL" class="codexTextProcess font-code" style="color: {{ page.page_highlight }};">{{ page.url }}</p>
+      </div>
+    </div>
+    <div class="codexImageBlock {% if item.init.no_toc == true %}codexImageBlockNoTOC{% endif %}">
+      <div class="codexImageContent">
+        <div class="codexLeftBar" style="border-color: {{ page.page_highlight }}"></div>
+        <div class="codexImage"><img src="{{ item.init.image }}" /></div>
+        <div class="codexRightBar" style="border-color: {{ page.page_highlight }}"></div>
+      </div>
+      <div class="codexImageUnderblurb font-code">
+        {{ item.init.imageBlurb }}
+      </div>
+    </div>
+  </div>
+  <div class="codexLower {{ item.init.lower_clear }} {{ item.init.lower_nothing }}">
+    <div class="codexScrollLine">
+      <hr class="fullDim">
+    </div>
+    <div class="codexScrollText">
+      <p class="font-code">v SCROLL DOWN v</p>
+    </div>
+  </div>
+</div>
