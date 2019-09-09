@@ -139,48 +139,9 @@ $(document).ready( function() {
     quoteBubbles($quotebubblesTarget, $(this));
   });
 
-  
-
-  // quoteShuffle($spinBootupShuffle.first(), $spinContainer, window.codelines);
-  // Generate set of random 'machine learning' data for RIGHT quoteshuffle
-  /* var generatedCodelines = [];
-  for (var i = 0; i < 100; i++) {
-    var randomNumberOfLines = Math.floor(Math.random() * 6);
-    var randomLogLine = "";
-    for (var y = 0; y < randomNumberOfLines; y++) {
-      randomLogLine = randomLogLine.concat(Math.random().toString(36).substring(3) + ";0 ");
-    }
-    if (randomLogLine !== "") {
-      generatedCodelines.push(randomLogLine);
-    } else {
-      generatedCodelines.push("&nbsp;");
-    }
-  }*/
-
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     // Mobile code
   } else {
-    // Desktop code
-
-    // SPINFLOAT ANIMATIONS (square selectors appearing inside banner at top of home page)
-    // Activate random timing, sizing, location
-    /*spinFloatRandomAnim('spin-float-1');
-    spinFloatRandomAnim('spin-float-2');*/
-
-    // SPINBANNER ANIMATIONS (giant spinning elements at top of home page)
-    // Clockwise spinner
-    /*TweenMax.to('.spinRightBig', 200, {rotation:"360", ease:Linear.easeNone, repeat:-1, transformOrigin:'50% 50%'}, {timeScale:0}
-    );
-    // Counterclockwise spinner
-    TweenMax.to('.spinLeftBig', 200, {rotation:"-360", ease:Linear.easeNone, repeat:-1, transformOrigin:'50% 50%'}, {timeScale:0}
-    );*/
-
-    // SPINTEXT ANIMATIONS (randomized quotes appearing around square inside banner at top of home page)
-    // Activate random text
-    /*var $spinText = $('.spinText');
-    $spinText.each(function() {
-      randomizeEcho(this, window.phrases);
-    });*/
 
     // STREAKER ANIMATIONS (small spaceships moving horizontally across screen in body)
     // Activate streaker image-swap animations
@@ -216,7 +177,6 @@ $(document).ready( function() {
 
     cycleThroughImageBackgrounds($('.hcd-reset-points'), ["hcd-reset-points-1", "hcd-reset-points-2", "hcd-reset-points-3", "hcd-reset-points-4", "hcd-reset-points-5", "hcd-reset-points-6", "hcd-reset-points-2", "hcd-reset-points-3", "hcd-reset-points-4", "hcd-reset-points-5", "hcd-reset-points-6", "hcd-reset-points-1"], 80, 2000);
     cycleThroughImageBackgrounds($('.hcd-attrition-codelines'), ["hcd-attrition-codelines-1", "hcd-attrition-codelines-2", "hcd-attrition-codelines-3"], 200);
-    //cycleThroughSpinner($('.hcd-pravo-icons-container'), ["hcd-pravo-1", "hcd-pravo-2", "hcd-pravo-3", "hcd-pravo-4"], 5000, 100);
     cycleThroughSpinnerColor($('.hcd-pravo-icons-container'), "hcd-pravo-icon-selected", 2000);
 
     $spinContainer = $('.spinContainer').first();
@@ -251,13 +211,6 @@ $(document).ready( function() {
     }
 
   } // End desktop code
-
-  
-
-  
-  
-
-  
 
   // Handles click of little close button on the top right of home page 'dialogs'.
   var hcdIconIterator = 0;
@@ -436,25 +389,6 @@ function quoteBubbles(bubbleContainer, container, interval = 3000) {
     quoteBubbles($(bubbleContainer), $(container), interval); 
   }, Math.floor(Math.random() * interval));
 }
-
-// Handles the animation for the LEFT codelines quoteshuffle element.
-/*function quoteShuffle(spinBootupShuffle, spinContainer, codelines, numberOfLines = 0, lineNumber = 0) {
-  if ($(spinBootupShuffle).outerHeight() > $(spinContainer).outerHeight() + 10) {
-    $(spinBootupShuffle).find('div').first().remove();
-  } else {
-    numberOfLines++;
-  }
-
-  if (lineNumber >= window.codelines.length){
-    lineNumber = 0;
-  }
-
-  $(spinBootupShuffle).append('<div style="pointer-events: none; overflow-anchor: none; user-select:none;">' + window.codelines[lineNumber++] + '</div>');
-
-  setTimeout(function() { 
-    quoteShuffle($(spinBootupShuffle), $(spinContainer), codelines, numberOfLines, lineNumber); 
-  }, Math.floor(Math.random() * 300));
-}*/
 
 // Handles the animation for the RIGHT codelines quoteshuffle element.
 function quoteShuffleSecond(spinBootupShuffle, spinContainer, codelines, numberOfLines = 0, lineNumber = 0) {

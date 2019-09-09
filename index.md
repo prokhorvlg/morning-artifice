@@ -7,6 +7,7 @@ search_description: "home"
 
 permalink: /
 layout: blank_page
+type: home
 
 page_highlight: "#ff00ff"
 
