@@ -6,6 +6,7 @@ $(document).ready(function() {
     json: '/collection.json',
     limit: 10,
     searchResultTemplate: '<div><a href="{url}"><h2>{title}</h2></a><span>{date}</span></div>',
+    noResultsText: '<div>No results :(</div>',
   });
 
   var fakeCaretInput = '#search-input',
@@ -18,22 +19,34 @@ $(document).ready(function() {
     $("#search-input").focus(); 
   });
 
+  var $searchText = $(".search-container-searchtext");
   $("#search-input").on('change input', function() {
     var $input = $(this);
     if ($input.val() == "") {
       // If empty, then show original list.
       $("#results-container").css("display", "none");
       $("#full-container").css("display", "block");
+      $searchText.html("<p class='font-code'>Showing all exhibitions</p>");
     } else {
       // If something is typed, show the search results.
       $("#results-container").css("display", "block");
       $("#full-container").css("display", "none");
+      $searchText.html("<p class='font-code' style='color: #ff00ff'>Showing filtered results</p>");
     }
   });
 
   $(".colTag").on("click", function() {
     var tagText = $(this).text();
     $("#search-input").val(tagText).change();
+    sjs.search(tagText);
+  }).on('keypress',function(e) {
+    if (e.which == 13) {
+      $(this).click();
+    }
+  });
+
+  $(".colSearchReset").on("click", function() {
+    $("#search-input").val("").change();
   }).on('keypress',function(e) {
     if (e.which == 13) {
       $(this).click();

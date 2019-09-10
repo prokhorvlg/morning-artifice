@@ -1,6 +1,6 @@
 ---
 # Collection page (Exhibition)
-title: "Productive Life"
+title: "A Life Worth Living"
 excerpt: "Instead of medical development focused on keeping people alive for as long as possible with little regard for whether that life is still worth living, little worth was ever placed on the length of a life. Instead, medical researchers and doctors remained focused on developing ways of improving the quality of the life people already had, since a post-scarcity society limited by its population demands it."
 layout: blank_page
 author: "prokhorVLG"
@@ -12,7 +12,7 @@ isCollectionExhibit: true
 # date: Used in search and shows up in collection list
 date: 2019-09-07T11:27:25,791-05:00
 # searchText: Adds invisible text to search
-searchText: "home"
+searchText: ""
 # searchExcerpt: Shows up as description in collection list
 searchExcerpt: "<p>Instead of medical development focused on keeping people alive for as long as possible with little regard for whether that life is still worth living, little worth was ever placed on the length of a life. Instead, medical researchers and doctors remained focused on developing ways of improving...</p>"
 tags: ["technology", "medical-science"]
@@ -20,8 +20,8 @@ tags: ["technology", "medical-science"]
 eyebrow: "Eyebrow"
 backgroundImage: "/assets/images/collection/backgrounds/productive-life.png"
 
-raw: productive-life
-permalink: /collection/productive-life/
+raw: a-life-worth-living
+permalink: /collection/a-life-worth-living/
 
 page_highlight: "#4fc180"
 image: "/assets/images/codex/technology/productive-life.png"
@@ -36,7 +36,7 @@ page_features: [
                     ],
                     no_toc: true,
 
-                    title: "Productive Life",
+                    title: "A Life Worth Living",
                     flavor: "",
                     flavor_url: '',
 

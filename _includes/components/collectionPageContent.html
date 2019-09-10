@@ -60,9 +60,10 @@
         <div class="col-search-dialog">
             <div class="col-search-top">
                 <div class="col-search-title">
-                    <h2 class="font-code">Search Query</h2>
+                    <h2 class="font-code">Filter Query</h2>
                 </div>
                 <div class="col-search-close">
+                  <a href="javascript:void(0);" class="font-code colSearchReset">reset</a>
                 </div>
             </div>
             <div class="col-search-main">
@@ -93,13 +94,18 @@
   </div>
 </div>
 <div id="search-container">
+  <div class="search-container-searchtext">
+      <p class="font-code">Showing all exhibitions</p>
+    </div>
   <ul id="results-container">
   </ul>
   <ul id="full-container">
-    {% for pageItem in site.pages %}
+    {% assign sorted = (site.pages | sort: 'date') | reverse %}
+    
+    {% for pageItem in sorted %}
     {% if pageItem.isSearchable == true and pageItem.isCollectionExhibit == true %}
 
-      <div class="col-item full-result">
+      <li class="col-item full-result">
         <div class="col-item-container parallax" style="background-image: url({{ pageItem.backgroundImage }});"
             data-parallax-type="b" 
             data-parallax-speed="-0.2" 
@@ -139,7 +145,7 @@
             <div class="col-item-timeline-text"><span style="color: {{ pageItem.page_highlight }};">{{ pageItem.date | date: "%B %d" }}, </span>{{ pageItem.date | date: "%Y" }}</div>
           </div>
         </div>
-      </div>
+      </li>
 
     {% endif %}
     {% endfor %}

@@ -16,6 +16,13 @@ window.pageType = '';
 
 $(document).ready(function(){
 
+  setTimeout(function () {
+        var viewheight = $(window).height();
+        var viewwidth = $(window).width();
+        var viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+    }, 300);
+
   // Load Featured Collection item.
   loadFeaturedHome();
 

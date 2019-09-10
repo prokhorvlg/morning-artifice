@@ -1,7 +1,7 @@
 ---
 # Collection page (Exhibition)
-title: "Computers"
-excerpt: "These are the computer paradigms of Unturned Stones. It’s hard to say that it’s the most important aspect of the world - since everything is interlinked through and though - but if there was one thing one could point to that has somehow impacted everything, it would be these innocent electronic devices."
+title: "The Computer"
+excerpt: "It was the most impressive tool man had ever dreamed of. Not because it could perform a great many functions, no, it was because it could perform all of them. The computer could take on many..."
 layout: blank_page
 author: "prokhorVLG"
 
@@ -24,8 +24,8 @@ tags: ["technology", "computer-science"]
 eyebrow: "the computers of the artifice era"
 backgroundImage: "/assets/images/collection/backgrounds/computers.png"
 
-raw: productive-life
-permalink: /collection/computers/
+raw: the-computer
+permalink: /collection/the-computer/
 
 page_highlight: "#c165d8"
 image: "/assets/images/codex/computers.png"
@@ -43,7 +43,7 @@ page_features: [
                       { title: 'Image Gallery', url: 'imageGallery' },
                     ],
 
-                    title: "Computers",
+                    title: "The Computer",
                     flavor: "",
                     flavor_url: '',
 
