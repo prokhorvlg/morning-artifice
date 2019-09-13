@@ -21,37 +21,28 @@ url: # the base hostname & protocol for your site, e.g. http://example.com
 host: localhost
 
 # theme: minima
-# End
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - SITECHANGELOG.md
-# End
 
 # Github metadata settings
 repository: prokhorvlg/morning-artifice
-# End
-
-#logo: /assets/img/logo/MvvmCross-avatar.png
 
 # Date format settings
 date_format: "%b %-d, %Y"
-# End
 
 # Site permalink settings
 permalink: pretty
-# End
-
-# Site menu settings
-#menu:
-#  - title: "Updates"
-#    url: "/updates"
-#  - title: "Codex"
-#    url: "/geography"
-# End
 
 sass:
     style: compressed
     sass_dir: assets/css/_sass
+
+plugins:
+  - jekyll-paginate
+
+paginate: 2
+paginate_path: "/collection/:num/"

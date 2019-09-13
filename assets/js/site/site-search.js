@@ -36,7 +36,7 @@ $(document).ready(function() {
   });
 
   $(".colTag").on("click", function() {
-    var tagText = $(this).text();
+    var tagText = $(this).data("col-tag");
     $("#search-input").val(tagText).change();
     sjs.search(tagText);
   }).on('keypress',function(e) {

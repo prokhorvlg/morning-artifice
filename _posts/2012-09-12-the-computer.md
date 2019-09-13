@@ -9,6 +9,9 @@ author: "prokhorVLG"
 isSearchable: true
 # isCollectionExhibit: Is this page a collection exhibition?
 isCollectionExhibit: true
+# exhibitType: Dictates the post type - including layout and style of presentation.
+# All exhibit types can be found in the README.md file in this folder.
+exhibitType: experience
 # date: Used in search and shows up in collection list
 date: 2019-09-09T11:27:25,791-05:00
 # searchText: Adds invisible text to search
@@ -25,7 +28,6 @@ eyebrow: "the computers of the artifice era"
 backgroundImage: "/assets/images/collection/backgrounds/computers.png"
 
 raw: the-computer
-permalink: /collection/the-computer/
 
 page_highlight: "#c165d8"
 image: "/assets/images/codex/computers.png"

@@ -9,6 +9,9 @@ author: "prokhorVLG"
 isSearchable: true
 # isCollectionExhibit: Is this page a collection exhibition?
 isCollectionExhibit: true
+# exhibitType: Dictates the post type - including layout and style of presentation.
+# All exhibit types can be found in the README.md file in this folder.
+exhibitType: codex
 # date: Used in search and shows up in collection list
 date: 2019-09-07T11:27:25,791-05:00
 # searchText: Adds invisible text to search
@@ -21,7 +24,6 @@ eyebrow: "Eyebrow"
 backgroundImage: "/assets/images/collection/backgrounds/productive-life.png"
 
 raw: a-life-worth-living
-permalink: /collection/a-life-worth-living/
 
 page_highlight: "#4fc180"
 image: "/assets/images/codex/technology/productive-life.png"
