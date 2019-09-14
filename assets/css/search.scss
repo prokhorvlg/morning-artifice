@@ -438,12 +438,19 @@
       }
 
       @mixin col-item-title {
+        @media (max-width: $screen-mobile) {
+          width: 90%;
+          margin: 0 auto;
+        }
         h3 {
           margin-bottom: 2px;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           position: relative;
-          font-size: 36px;
+          font-size: 2.4rem;
+          @media (max-width: $screen-mobile) {
+            font-size: 1.6rem;
+          }
           letter-spacing: -0.05rem;
           font-weight: 800;
           @media (max-width: $screen-tablet) {
@@ -538,9 +545,9 @@
         align-items: center;
 
         @media (max-width: $screen-mobile) {
-              margin: 0 auto;
-    width: 325px;
-    max-width: 100%;
+          margin: 0 auto;
+          width: 325px;
+          max-width: 100%;
         }
 
         .col-item-content-button-arrow {
@@ -560,6 +567,10 @@
           font-size: $font-size-tiny-code;
           letter-spacing: 0.15rem;
           margin-left: 10px;
+
+          @media (max-width: $screen-mobile) {
+            font-size: 0.6875rem;
+          }
         }
         .col-item-content-frame {
           position: relative;
@@ -643,8 +654,13 @@
               margin-bottom: 50px;
               .col-item-content-eyebrow {
                 text-align: right;
+                @media (max-width: $screen-mobile) {
+                  width: 90%;
+                  margin: 0 auto;
+                }
               }
               .col-item-content-frame {
+                display: block;
                 img {
                   max-width: 100%;
                   width: 900px;

@@ -207,12 +207,12 @@
 
                 <div class="col-item-content-imagesection">
                   <div class="col-item-content-eyebrow" style="color: {{ pageItem.page_highlight }};">{{ pageItem.eyebrow }}</div>
-                  <div class="col-item-content-frame" style="border-color: {{ pageItem.page_highlight }};">
+                  <a class="col-item-content-frame image-popup-no-margins" style="border-color: {{ pageItem.page_highlight }}; text-decoration: none;" href="{{ pageItem.image }}" target="_blank">
                     <img src="{{ pageItem.image }}" />
                     <div class="frame-border-full" style="border-color: {{ pageItem.page_highlight }};"></div>
                     <div class="col-item-content-frame-border frame-border-left" style="border-color: {{ pageItem.page_highlight }};"></div>
                     <div class="col-item-content-frame-border frame-border-bottom" style="border-color: {{ pageItem.page_highlight }};"></div>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-item-content-textsection">
                   <div class="col-item-content-excerpt">{{ pageItem.searchExcerpt }}</div>
