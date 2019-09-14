@@ -1,24 +1,29 @@
 $(document).ready(function() {
 
+  // Initialize SimpleJekyllSearch functionality.
   var sjs = SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '/collection.json',
     limit: 10,
     searchResultTemplate: '<div><a href="{url}"><h2>{title}</h2></a><span>{date}</span></div>',
-    noResultsText: '<div>No results :(</div>',
+    noResultsText: '<div class="no-results"><div class="no-results-desktop hide-on-mobile"><img src="/assets/images/collection/no-results.png" alt="No Results Found"/></div><div class="no-results-mobile hide-on-desktop"><img src="/assets/images/collection/no-results-mobile.png" alt="No Results Found"/></div></div>',
   });
 
+  // Initialize fake caret (the input cursor in the filter query window)
   var fakeCaretInput = '#search-input',
     fakeCaretInputGhost = '.search-input__caret-container span',
     fakeCaret = '.search-input__caret';
 
   fakeCaretInit();
 
+  // Initialize event handlers...
+  // Whenever the search dialog is clicked, set focus to input field.
   $(".searchFocus").click(function() {
     $("#search-input").focus(); 
   });
 
+  // Whenever the search input field changes, display page contents or search results accordingly.
   var $searchText = $(".search-container-searchtext");
   $("#search-input").on('change input', function() {
     var $input = $(this);
@@ -26,15 +31,16 @@ $(document).ready(function() {
       // If empty, then show original list.
       $("#results-container").css("display", "none");
       $("#full-container").css("display", "block");
-      $searchText.html("<p class='font-code'>Showing all exhibitions</p>");
+      $searchText.html("<p class='font-code'>Showing all exhibitions on this page</p>");
     } else {
       // If something is typed, show the search results.
       $("#results-container").css("display", "block");
       $("#full-container").css("display", "none");
-      $searchText.html("<p class='font-code' style='color: #ff00ff'>Showing filtered results</p>");
+      $searchText.html("<p class='font-code' style='color: #ff00ff'>Showing filtered results from entire collection</p>");
     }
   });
 
+  // Whenever a collection tag is clicked, populate the input with the tag text and run a search.
   $(".colTag").on("click", function() {
     var tagText = $(this).data("col-tag");
     $("#search-input").val(tagText).change();
@@ -45,6 +51,7 @@ $(document).ready(function() {
     }
   });
 
+  // Reset button in top right of dialog resets search field to blank.
   $(".colSearchReset").on("click", function() {
     $("#search-input").val("").change();
   }).on('keypress',function(e) {

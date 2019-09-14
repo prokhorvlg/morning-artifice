@@ -1,22 +1,19 @@
 ---
 ---
 [
-  {% for page in site.pages %}
+  {% for page in site.posts %}
     {
-      {% if page.isSearchable == true and page.isCollectionExhibit == true %}
       "description": "default {{ page.search_description page.excerpt | escape }}",
       
       "title": "{{ page.title | escape }}",
       "url": "{{ page.baseurl }}{{ page.url }}",
       "image": "{{ page.image }}",
-      "tags": "{{ page.tags | join: ', ' }}",
+      "tags": "tag-{{ page.exhibitType }}, {{ page.tags | join: ', ' }}",
       "tagsRaw": "<a>{{ page.tags | join: '</a><a>' }}</a>",
       "date": "{{ page.date }}",
       "dateConverted": "{{ page.date | date_to_long_string }}",
       "excerpt": "{{ page.excerpt }}",
       "color": "{{ page.page_highlight }}"
-
-      {% endif %}
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}

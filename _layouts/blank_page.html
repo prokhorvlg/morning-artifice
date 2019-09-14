@@ -272,14 +272,15 @@ layout: blank_page
     {% endif %}
 
     <script>
-      $(document).ready(function() {
-        $('.image-popup-no-margins').magnificPopup(
-        {
-          type: 'image',
-          fixedContentPos: false,
-          closeOnContentClick: true,
+      $('.image-popup-no-margins').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        image: {
+            verticalFit: true
         }
-        );
       });
     </script>
 

@@ -449,7 +449,7 @@
           position: relative;
           font-size: 2.4rem;
           @media (max-width: $screen-mobile) {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
           }
           letter-spacing: -0.05rem;
           font-weight: 800;
@@ -661,6 +661,34 @@
               }
               .col-item-content-frame {
                 display: block;
+
+                transition: 0.1s ease-in-out;
+                div {
+                  transition: 0.1s ease-in-out;
+                }
+                img {
+                  transition: 0.1s ease-in-out;
+                }
+
+                $frame-hover-offset: 5px;
+                &:hover, &:focus {
+                  .frame-border-full {
+                    left: $frame-hover-offset;
+                    bottom: $frame-hover-offset;
+                    top: $frame-hover-offset;
+                    right: $frame-hover-offset;
+                  }
+                  .frame-border-left {
+                    width: 6px;
+                  }
+                  .frame-border-bottom {
+                    height: 6px;
+                  }
+                  img {                   
+                    padding: $frame-hover-offset;
+                  }
+                }
+
                 img {
                   max-width: 100%;
                   width: 900px;
@@ -733,7 +761,7 @@
             margin-top: 40px;
             margin-bottom: 40px;
             @media (max-width: $screen-laptop) {
-              margin-top: 120px;
+              margin-top: 140px;
               margin-bottom: 100px;
             }
             @media (max-width: $screen-tablet) {
@@ -743,6 +771,9 @@
             }
             .col-item-content-imagesection {
               @include col-item-imagesection;
+              @media (max-width: $screen-mobile) {
+                margin-top: 0;
+              }
             }
           }
           .col-item-content-textsection {
@@ -779,5 +810,154 @@
         }
       }
     }
+  }
+}
+
+// Collections pagination section
+.col-pagination-container {
+  border-top: 1px solid white;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-image: url(../images/collection/gradient-bg-collection-down.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  @media (max-width: $screen-tablet) {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .col-pagination {
+    width: 800px;
+    max-width: 90%;
+
+    .col-pagination-dialog {
+      border: 2px solid white;
+      border-radius: 5px;
+      .col-pagination-top {
+        background: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .col-pagination-title {
+          h2 {
+            color: #111;
+            margin: 0;
+            padding: 8px;
+            padding-left: 15px;
+            user-select: none;
+          }
+        }
+      }
+      .col-pagination-main {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        a.pagination-item {
+          &:hover, &:active {
+            border-color: #f0f;
+            color: #f0f;
+            border-width: 2px;
+            padding: 4px 7px;
+          }
+        }
+
+        .pagination-item {
+          padding: 5px 8px;
+          margin: 5px;
+          display: block;
+          border: 1px solid white;
+          border-radius: 4px;
+          text-decoration: none;
+          line-height: 1.9rem;
+          transition: 0s ease-in-out;
+          user-select: none;
+
+          &.page_number {
+            background-color: #f0f;
+            color: black;
+            border-color: black;
+            user-select: none;
+          }
+        }
+
+      }
+    }
+  }
+  
+}
+
+.col-pagination-lines {
+  position: relative;
+  max-width: 1800px;
+  margin: 0 auto;
+  .col-lines-main {
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    left: calc(50% + 560px);
+    height: 255px;
+    z-index: 10;
+
+    @media (max-width: $screen-laptop) {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      height: 50px;
+      border-top: none;
+    }
+  }
+  .col-lines-circle {
+    position: absolute;
+    top: 244px;
+    right: 5%;
+    left: calc(50% + 542px);
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    @media (max-width: $screen-laptop) {
+      left: 50%;
+      right: auto;
+      top: 49px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.no-results {
+  img {
+    max-width: 100%;
+  }
+  .no-results-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 550px;
+  }
+  .no-results-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 330px;
   }
 }

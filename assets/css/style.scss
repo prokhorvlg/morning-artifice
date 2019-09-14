@@ -3072,3 +3072,15 @@ a.roll:active, a.roll:focus {
   -webkit-transform: none !important;
   transform: none !important;
 }
+
+.hide-on-mobile {
+  @media (max-width: $screen-mobile) {
+    display: none !important;
+  }
+}
+
+.hide-on-desktop {
+  @media (min-width: $screen-mobile) {
+    display: none !important;
+  }
+}
