@@ -13,7 +13,7 @@ isCollectionExhibit: true
 # All exhibit types can be found in the README.md file in this folder.
 exhibitType: codex
 # date: Used in search and shows up in collection list
-date: 2019-09-07T11:27:25,791-05:00
+date: 2019-09-17
 # searchText: Adds invisible text to search
 searchText: ""
 # searchExcerpt: Shows up as description in collection list

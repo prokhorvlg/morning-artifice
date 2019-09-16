@@ -114,8 +114,8 @@
                 data-parallax-speed="-0.2" 
                 data-parallax-offset="60%">
               <div class="col-item-content">
-                <div class="col-item-content-textsection">
-                  <div class="hide-on-desktop">
+                <div class="col-item-content-textsection hide-on-desktop">
+                  <div class="">
                     <div class="col-item-content-title"><h3 data-text="{{ pageItem.title }}" style="background-image: -webkit-linear-gradient({{ pageItem.page_highlight }}, {% if pageItem.page_highlight_2 %} {{ pageItem.page_highlight_2 }} {% else %} {{ pageItem.page_highlight }} {% endif %});">{{ pageItem.title }}</h3></div>
                     <div class="col-item-content-tags">
                       <a href="javascript:void(0);" class="col-item-content-tag-type colTag" style="color: {{ pageItem.page_highlight }}; border-color: {{ pageItem.page_highlight }};" data-col-tag="tag-codex">
@@ -327,9 +327,146 @@
             </div>
           </li>
 
-        {% elsif pageItem.exhibitType == "news" %}
+        {% elsif pageItem.exhibitType == "update" %}
 
-          news
+          <li class="col-item full-result update">
+            <div class="col-item-container" style="{% if pageItem.backgroundGradient %}
+             {{ pageItem.backgroundGradient }}
+            {% else %}
+              background-image: url({{ pageItem.backgroundImage }});
+            {% endif %}"
+                data-parallax-type="b" 
+                data-parallax-speed="-0.2" 
+                data-parallax-offset="60%">
+              <div class="col-item-content">
+                <div class="col-item-content-textsection hide-on-desktop">
+                  <div class="col-item-content-title"><h3 data-text="{{ pageItem.title }}" style="background-image: -webkit-linear-gradient({{ pageItem.page_highlight }}, {% if pageItem.page_highlight_2 %} {{ pageItem.page_highlight_2 }} {% else %} {{ pageItem.page_highlight }} {% endif %});">{{ pageItem.title }}</h3></div>
+                  <div class="col-item-content-tags">
+                    <a href="javascript:void(0);" class="col-item-content-tag-type colTag" style="color: {{ pageItem.page_highlight }}; border-color: {{ pageItem.page_highlight }};" data-col-tag="tag-update">
+
+                      <svg 
+                       xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink"
+                       width="27px" height="28px">
+                      <path fill-rule="evenodd"  stroke="{{ pageItem.page_highlight }}" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                       d="M15.750,5.680 L15.750,2.920 L23.083,7.520 L15.750,11.200 L15.750,9.360 L7.500,9.360 L7.500,13.040 L2.917,13.040 L2.917,7.520 L4.750,5.680 L15.750,5.680 "/>
+                      <path fill-rule="evenodd"  stroke="{{ pageItem.page_highlight }}" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                       d="M10.250,21.320 L10.250,24.080 L2.917,19.480 L10.250,15.800 L10.250,17.640 L18.500,17.640 L18.500,13.960 L23.083,13.960 L23.083,19.480 L21.250,21.320 L10.250,21.320 "/>
+                      </svg>
+
+                      <span>ANNOUNCEMENT/UPDATE</span>
+
+                    </a>
+                    {% for tagItem in pageItem.tags %}
+                      <a href="javascript:void(0);" class="col-item-content-tag colTag" style="color: {{ pageItem.page_highlight }}; border-color: {{ pageItem.page_highlight }};" data-col-tag="{{ tagItem }}">{{ tagItem }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+
+                <div class="col-item-content-imagesection">
+                  <div class="col-item-content-eyebrow" style="color: {{ pageItem.page_highlight }};">{{ pageItem.eyebrow }}</div>
+                  <div class="col-item-content-frame" style="border-color: {{ pageItem.page_highlight }};">
+                    
+                    <svg 
+                       xmlns="http://www.w3.org/2000/svg"
+                       xmlns:xlink="http://www.w3.org/1999/xlink"
+                       width="147.5px" height="235.5px">
+                      <defs>
+                      <linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgb(242,39,39)" stop-opacity="1" />
+                        <stop offset="100%" stop-color="rgb(242,39,39)" stop-opacity="1" />
+                      </linearGradient>
+
+                      </defs>
+                      <g class="col-update-bg col-update-bg-1"><path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M59.600,52.227 L82.550,52.227 L82.550,109.676 L59.600,109.676 L59.600,52.227 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M90.650,90.526 L124.400,90.526 L124.400,156.680 L90.650,156.680 L90.650,90.526 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M79.850,139.271 L102.800,139.271 L102.800,178.441 L79.850,178.441 L79.850,139.271 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M63.650,196.721 L73.100,196.721 L73.100,215.000 L63.650,215.000 L63.650,196.721 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M85.250,190.627 L90.650,190.627 L90.650,198.461 L85.250,198.461 L85.250,190.627 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M100.100,165.384 L113.600,165.384 L113.600,193.239 L100.100,193.239 L100.100,165.384 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M132.500,94.879 L141.950,94.879 L141.950,109.676 L132.500,109.676 L132.500,94.879 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M66.350,9.575 L81.200,9.575 L81.200,59.190 L66.350,59.190 L66.350,9.575 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M98.750,39.170 L113.600,39.170 L113.600,68.765 L98.750,68.765 L98.750,39.170 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M78.500,60.931 L104.150,60.931 L104.150,99.231 L78.500,99.231 L78.500,60.931 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M60.950,113.158 L79.850,113.158 L79.850,143.623 L60.950,143.623 L60.950,113.158 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M38.000,90.526 L46.100,90.526 L46.100,116.640 L38.000,116.640 L38.000,90.526 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M90.650,-0.000 L97.400,-0.000 L97.400,15.668 L90.650,15.668 L90.650,-0.000 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M143.300,147.105 L146.000,147.105 L146.000,154.069 L143.300,154.069 L143.300,147.105 Z"/>
+                      <path fill-rule="evenodd"  fill="rgb(242, 39, 39)"
+                       d="M-0.000,227.000 L4.000,227.000 L4.000,231.000 L-0.000,231.000 L-0.000,227.000 Z"/></g>
+
+                      <path fill-rule="evenodd"  stroke="rgb(242, 39, 39)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                       d="M75.000,47.000 L107.000,47.000 L99.320,146.000 L82.680,146.000 L75.000,47.000 Z"/>
+                      <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                       d="M64.000,37.000 L73.000,149.000 L63.000,188.000 L119.084,188.000 L109.058,149.000 L118.081,37.000 L64.000,37.000 Z"/>
+                      <path fill-rule="evenodd"  stroke="rgb(242, 39, 39)" stroke-width="3px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                       d="M75.000,179.000 L107.000,179.000 L103.160,157.423 L78.840,157.423 L75.000,179.000 Z"/>
+                      </svg>
+
+                    <div class="frame-border-full" style="border-color: {{ pageItem.page_highlight }};"></div>
+                    <div class="col-item-content-frame-border frame-border-left" style="border-color: {{ pageItem.page_highlight }};"></div>
+                    <div class="col-item-content-frame-border frame-border-bottom" style="border-color: {{ pageItem.page_highlight }};"></div>
+                  </div>
+                </div>
+                <div class="col-item-content-textsection ">
+                  <div class="hide-on-mobile">
+                    <div class="col-item-content-title"><h3 data-text="{{ pageItem.title }}" style="background-image: -webkit-linear-gradient({{ pageItem.page_highlight }}, {% if pageItem.page_highlight_2 %} {{ pageItem.page_highlight_2 }} {% else %} {{ pageItem.page_highlight }} {% endif %});">{{ pageItem.title }}</h3></div>
+                    <div class="col-item-content-tags">
+                      <a href="javascript:void(0);" class="col-item-content-tag-type colTag" style="color: {{ pageItem.page_highlight }}; border-color: {{ pageItem.page_highlight }};" data-col-tag="tag-update">
+
+                        <svg 
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="27px" height="28px" style="margin-bottom: -10px;">
+                        <path fill-rule="evenodd"  stroke="{{ pageItem.page_highlight }}" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                         d="M15.750,5.680 L15.750,2.920 L23.083,7.520 L15.750,11.200 L15.750,9.360 L7.500,9.360 L7.500,13.040 L2.917,13.040 L2.917,7.520 L4.750,5.680 L15.750,5.680 "/>
+                        <path fill-rule="evenodd"  stroke="{{ pageItem.page_highlight }}" stroke-width="2px" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                         d="M10.250,21.320 L10.250,24.080 L2.917,19.480 L10.250,15.800 L10.250,17.640 L18.500,17.640 L18.500,13.960 L23.083,13.960 L23.083,19.480 L21.250,21.320 L10.250,21.320 "/>
+                        </svg>
+
+                        <span>ANNOUNCEMENT/UPDATE</span>
+
+                      </a>
+                      {% for tagItem in pageItem.tags %}
+                        <a href="javascript:void(0);" class="col-item-content-tag colTag" style="color: {{ pageItem.page_highlight }}; border-color: {{ pageItem.page_highlight }};" data-col-tag="{{ tagItem }}">{{ tagItem }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="col-item-content-excerpt">{{ pageItem.searchExcerpt }}</div>
+                  <a href="{{ pageItem.baseurl }}{{ pageItem.url }}" class="col-item-content-button" style="color: {{ pageItem.page_highlight }}; border-color: {{ pageItem.page_highlight }};"><span>View More</span>
+                    <div class="col-item-content-button-arrow">
+                      <svg width="10px" height="10px" xml:space="preserve" _v-978818ec=""> <polygon fill="{{ pageItem.page_highlight }}" points="3.6,5 0,1.4 1.4,0 5,3.6 6.4,5 5,6.4 1.4,10 0,8.6 " _v-978818ec=""></polygon></svg>
+                    </div>
+                  </a>
+                  <div class="col-item-stripes" style="background: repeating-linear-gradient(45deg,rgba(255,255,255,0),rgba(255,255,255,0) 10px, {{ pageItem.page_highlight }} 10px, {{ pageItem.page_highlight }} 20px)"></div>
+                </div>
+              </div>
+              <div class="col-item-timeline">
+                <div class="col-item-timeline-top-line"></div>
+                <div class="col-item-timeline-bottom-line"></div>
+                <div class="col-item-timeline-brackets">
+                  <div class="col-item-timeline-left-bracket" style="border-color: {{ pageItem.page_highlight }};"></div>
+                  <div class="col-item-timeline-right-bracket" style="border-color: {{ pageItem.page_highlight }};"></div>
+                  <div class="col-item-timeline-bracket-point"></div>
+                </div>
+                <div class="col-item-timeline-text"><span style="color: {{ pageItem.page_highlight }};">{{ pageItem.date | date: "%B %d" }}, </span>{{ pageItem.date | date: "%Y" }}</div>
+              </div>
+            </div>
+          </li>
 
         {% endif %}
 
@@ -354,9 +491,9 @@
           </div>
           <div class="col-pagination-main">
 
-            <a href="/collection/" class="pagination-item font-code">First</a>
-
+          
             {% if paginator.previous_page %}
+              <a href="/collection/" class="pagination-item font-code">First</a>
               <a href="{{ paginator.previous_page_path }}" class="pagination-item font-code previous">Previous</a>
               <a href="{{ paginator.previous_page_path }}" class="pagination-item font-code previous">{{ paginator.previous_page }}</a>
             {% endif %}
@@ -366,9 +503,10 @@
             {% if paginator.next_page %}
               <a href="{{ paginator.next_page_path }}" class="pagination-item font-code next">{{ paginator.next_page }}</a>
               <a href="{{ paginator.next_page_path }}" class="pagination-item font-code next">Next</a>
+              <a href="/collection/{{ paginator.total_pages }}" class="pagination-item font-code">Last</a>
             {% endif %}
 
-            <a href="/collection/{{ paginator.total_pages }}" class="pagination-item font-code">Last</a>
+            
 
           </div>
       </div>

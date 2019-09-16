@@ -44,5 +44,7 @@ sass:
 plugins:
   - jekyll-paginate
 
-paginate: 2
+paginate: 10
 paginate_path: "/collection/:num/"
+
+future: true
